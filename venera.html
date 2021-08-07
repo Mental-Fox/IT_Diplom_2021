@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="apple-touch-icon" href="/img/apple-touch-icon.png" sizes="180x180">
+	<link rel="shortcut icon" href="img/favicon-32x32.ico" sizes="32x32" type="image/x-icon">
+	<link rel="shortcut icon" href="img/favicon-16x16.ico" sizes="16x16" type="image/x-icon">
+
+	<link rel="stylesheet" href="css/space.css">
+	<link rel="stylesheet" href="css/css.css">
+	<title>♀ | Венера: все, что вы хотели знать о близнеце Земли | ♀</title>
+
+</head>
+
+<body>
+	<div class="page-bg">
+		<div id="particles-js"></div>
+	</div>
+	<div id="page-wrap">
+		<div class="top-menu">
+			<ul class="blok-menu">
+				<nav>
+					<ul class="main">
+						<li><a href="index.html">Главная</a></li>
+						<li><a href="pac.html">Солнечная система</a></li>
+						<li>
+							<a href="#">Звезды</a>
+							<ul>
+								<li><a href="sun.html">Солнце <img src="img/icon/sun.png" width="60" height="60" alt=""> </a>
+								</li>
+								<li><a href="">Полярная<img src="img/icon/polrnaji.png" width="60" height="60" alt="">
+									</a></li>
+								<li><a href=""></a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="planets.html">Планеты</a>
+							<ul>
+								<li> <a href="mercur.html"> Меркурий <img src="img/icon/mercur.png" alt="" width="60"
+											height="60"></a></li>
+								<li><a href="venera.html">Венера
+										<img src="img/icon/venus.png" alt="" width="60" height="60"></a></li>
+								<li><a href="earth.html">Земля<img src="img/icon/earth.png" alt="" width="60" height="60"></a>
+								</li>
+								<li><a href="mars.html">Марс<img src="img/icon/mars.png" alt="" width="60" height="60"></a></li>
+								<li><a href="jupiter.html">Юпитер<img src="img/icon/jupiter.png" alt="" width="60"
+											height="60"></a>
+								</li>
+								<li><a href="saturn.html">Сатурн<img src="img/icon/saturn.png" alt="" width="60"
+											height="60"></a>
+								</li>
+								<li><a href="uran.html">Уран<img src="img/icon/uran.png" alt="" width="60" height="60"></a></li>
+								<li><a href="neptune.html">Нептун<img src="img/icon/neptun.png" alt="" width="60" height="60"></a></li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="#">Карликовые планеты</a>
+							<ul>
+								<li><a href="#">Плутон <img src="img/icon/pluton.png" width="60" height="60" alt=""> </a></li>
+								<li><a href="#">Церера <img src="img/icon/ceres.png" width="60" height="60" alt=""> </a></li>
+								<li><a href="#">Хаумеф <img src="img/icon/haumef.png" width="60" height="60" alt=""> </a></li>
+								<li><a href="#">Макемаке <img src="img/icon/makemake.png" width="60" height="60" alt=""> </a>
+								</li>
+								<li><a href="#">Эрида(Эрис) <img src="img/icon/eris.png" width="60" height="60" alt=""> </a>
+								</li>
+							</ul>
+						</li>
+
+						<li><a href="#">Спутники</a></li>
+						<li><a href="#">Разное</a></li>
+
+						<li>
+							<div class="box">
+								<div class="container-1">
+									<input type="search" id="search" placeholder="Поиск..." />
+								</div>
+							</div>
+						</li>
+					</ul>
+				</nav>
+			</ul>
+		</div>
+
+		<div class="ytWidget">
+			<div id="ytWidget"> </div>
+			<script
+				src="https://translate.yandex.net/website-widget/v1/widget.js?widgetId=ytWidget&pageLang=ru&widgetTheme=light&autoMode=false"
+				type="text/javascript"></script>
+		</div>
+
+		<div class="logo"  >
+			<canvas id="myCanvas"></canvas>
+
+			<script src="js/three.js"></script>
+			<script src="js/OrbitControls.js"></script>
+
+			<script id="vertexShader" type="x-shader/x-vertex">
+				varying vec3 vNormal;
+				void main() 
+				{
+					 vNormal = normalize( normalMatrix * normal );
+					 gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
+				}
+				</script>
+
+			<!-- fragment shader a.k.a. pixel shader -->
+			<script id="fragmentShader" type="x-shader/x-vertex">
+				varying vec3 vNormal;
+				void main() 
+				{
+					float intensity = pow( 0.7 - dot( vNormal, vec3( 0.0, 0.0, .55 ) ), 4.0 ); 
+					 gl_FragColor = vec4( 1.3, 1.0, 1.0, .7 ) * intensity;
+				}
+				</script>
+			<script src="js/planets/venera.js"></script>
+			<!-- ------------------------------------------------ -->
+			<div class="anim-show">
+				<div class="block-har">
+					<h4>ВЕНЕРА - вторая планета от Солнца</h4>
+					<hr>
+					<span id="typed"></span>
+					<ul class="har" id="typed-strings">
+						<li>Диаметр: 12104 км <br>
+							Температура поверхности: около +475 °С <br>
+							Растояние от Солнца: 108 млн. км<br>
+							Спутники: нет
+						</li>
+					</ul>
+					<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+					<script>
+						var typed = new Typed('#typed', {
+							stringsElement: '#typed-strings',
+							typeSpeed: 80,
+						});
+					</script>
+				</div>
+
+
+				<!--При нажатии на кнопку показывается сири-->
+				<div class="siri">
+					<audio id="myZvuk"
+						src="https://hewbis.com/play/Q1xIcddIYDPz3qj30XBFuK2gkTPC3ScjLe11hL-Ia4BmfLij8zZyMYBMR2qMlPgQ_Z4_30pLPhMc1nyI3wXCBSzJpzYIusvw2VXOhZ6yfxoYzNJMX0Monp5uo-Md3W3kwe-zJAflr83vseREjT0aNbSwiUJ_vYx0bSwsimvU3r1eeVqXbWYb4Ka9EF1hXW09mX0JTS4D2sRQ0-Fson4gVMEV1oAlVNVRvbqEDQrMzkphcAnnHnIBmMxGLD-HijlCTXO2IYQihpaj896qwf5PCAPeK3a01o1Gh0HGqRCQMgo5R2vGQOUt8gh8k0l90wEJ6-vxaPyDhogv0Qma1txtDQ/file.mp3"
+						preload="auto"></audio>
+					<input type="button" class="modelbutt3d  zvuk" value="Звук планеты" onclick="togglePlay2(myZvuk)" />
+					<div id="container-9"></div>
+					<script src="https://unpkg.com/siriwave/dist/siriwave.umd.min.js"></script>
+					<script src="js/siri.js"></script>
+					<script>
+						window.onload = function () {
+							const SW8 = new SiriWave({
+								style: "ios",
+								container: document.getElementById("container-9"),
+								autostart: true,
+								speed: 0.009,
+								amplitude: 0.5,
+								pixelDepth: 0.08,
+								lerpSpeed: 0.2,
+								frequency: 4,
+								color: "#fff3e0",
+							});
+						};
+					</script>
+				</div>
+				<!-- ------------------------------------------------ -->
+				<div class="block-qart ">
+
+					<audio id="myAudio" src="/audio/venera.mp3" preload="auto"></audio>
+					<a href=""><button class="modelbutt3d">посмотреть 3d рельеф </button></a>
+					<input type="button" class="modelbutt3d start" value="прослушать/стоп" onclick="togglePlay()" />
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+
+	<div class="content" >
+		<a href="#" class="scrollup">Наверх</a>
+		<div class="meny">
+			<a href="#vv">1. Bвeдeниe</a>
+			<a href="#fakt">2. Факты о Венере</a>
+			<a href="#phenomenon">3. Интересные явления Венеры</a>
+			<a href="#size">4. Paзмep и вращение</a>
+			<a href="#sostav">5. Cocтaв и пoвepxнocть Венеры</a>
+			<a href="#venus_atmosphere">6. Aтмocфepa и тeмпepaтуpa Венеры</a>
+			<a href="#of_venus">7. Наблюдение за Венерой</a>
+			<a href="#disk_sun">8. Прохождение по диску Солнца</a>
+			<a href="#sputnik">9. Спутники Венеры</a>
+			<a href="#Colonization ">10. Колонизация Венеры</a>
+		</div>
+
+
+		<div id="vv">
+			<div class="item1">Венера — тезка богини любви и бывшая «сестра» Земли</div>
+			<p class="text">
+				Первые исследования планеты сделал Галилей. Он же официально открыл ее в 1610 году. Раньше астрономы считали
+				Венеру двойником Земли ввиду схожего состава, размера и массы. Но позже выяснилось, что остальные параметры
+				резко отличаются и «сестрами» эти космические представительницы быть не могут.
+				<br>
+				В 1961 году на орбите планеты
+				побывал наш космический корабль «Венера-1».
+				<br>
+				Венера — вторая от Солнца и самая горячая планета (температура поверхности прогревается почти до 500
+				градусов). Она же и самая яркая из-за близости к земле и способности облаков отражать солнечный свет.
+				Возможно, именно поэтому ее назвали в честь римской богини любви.
+			</p>
+		</div>
+
+		<div id="fakt">
+			<div class="item1">12 познавательных фактов о Венере</div>
+
+			<div class="image">
+				<figure>
+					<div class="ims">
+						<img src="img/venus/venus-retrograde-2014.jpg" alt="">
+						<figcaption>
+							<h6>Интepecные фaкты o плaнeтe Mepкуpий.</h6>
+						</figcaption>
+					</div>
+				</figure>
+			</div>
+		</div>
+
+		<div class="cards-list">
+			<div class="card 1">
+				<div class="card_title title-white">
+					<p>
+						<br>
+						Давление на планете сильнее почти в 100 раз, чем на Земле
+					</p>
+				</div>
+			</div>
+
+			<div class="card 1">
+				<div class="card_title title-white">
+					<p>
+						<br>
+						<br>
+						Отсутствуют водоемы, флора и фауна
+					</p>
+				</div>
+			</div>
+
+			<div class="card 1">
+				<div class="card_title title-white">
+					<p>
+						<br>
+						<br>
+						Атмосфера состоит почти на 97% из углекислого газа
+					</p>
+				</div>
+			</div>
+
+			<div class="card 1">
+				<div class="card_title title-white">
+					<p>
+						<br>
+						<br>
+						Венера способна отбрасывать тень на землю
+					</p>
+				</div>
+			</div>
+
+			<div class="card 1">
+				<div class="card_title title-white">
+					<p>
+						<br>
+						Облака имеют в составе серную кислоту и способны растворять алмазы и цинк.
+					</p>
+				</div>
+			</div>
+
+			<div class="card 1">
+				<div class="card_title title-white">
+					<p>
+						<br>
+						Около 90% поверхности планеты — застывшая вулканическая лава.
+					</p>
+				</div>
+			</div>
+
+			<div class="card 1">
+				<div class="card_title title-white">
+					<p>
+						<br>
+						<br>
+						Нет спутников
+					</p>
+				</div>
+			</div>
+
+			<div class="card 1">
+				<div class="card_title title-white">
+					<p>
+						<br>
+						<br>
+						Самая высокая вершина достигает более 11 км.
+					</p>
+				</div>
+			</div>
+
+			<div class="card 1">
+				<div class="card_title title-white">
+					<p>
+						<br>
+						Отсутствует разница между дневными и ночными температурами.
+					</p>
+				</div>
+			</div>
+
+			<div class="card 1">
+				<div class="card_title title-white">
+					<p>
+						<br>
+						<br>
+						Один день на Венере равен 117 земным суткам
+					</p>
+				</div>
+			</div>
+
+			<div class="card 1">
+				<div class="card_title title-white">
+					<p>
+						<br>
+						Венера, как и Меркурий, проходит на фоне Солнца один раз в 100–120 лет.
+					</p>
+				</div>
+			</div>
+
+			<div class="card 1">
+				<div class="card_title title-white">
+					<p>
+						<br>
+						<br>
+						Здесь частые грозы
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<br>
+		<div id="phenomenon">
+			<div class="item1">Интересные явления</div>
+			<p class="text">
+				Венеру видно с Земли. Она выглядит как большая белая звезда, причем заметна как днем, так и ночью.
+				<br>
+				В последние 20–25 лет скорость вращения Венеры вокруг Солнца замедляется примерно на 30 секунд в год.
+				Поверхность покрыта лавой, на планете — тысячи вулканов. Предполагается, что сотни или тысячи лет назад
+				здесь
+				были активные вулканы.
+			</p>
+		</div>
+		<div id="size">
+			<div class="item1">Paзмep и вращение</div>
+			<p class="text">
+				Внешне по размеру и по массе это почти копия Земли, 95% диаметра нашей планеты, и массой 81% от земной.
+				Часто
+				её называют сестрой Земли. Соответственно притяжение объекта почти сравнима с тем, которые мы ощущаем на
+				Земле.
+			</p>
+			<p class="text">
+				У Венеры нет магнитного поля. Люди это связывают с медленным вращением вокруг своей оси, один оборот
+				занимает
+				243 земных дня. Вокруг Солнца Венера оборачивается за 225 дней. Она вращается в направлении, противоположном
+				направлению вращения большинства планет.
+			</p>
+		</div>
+		<div id="sostav">
+			<div class="item1">Cocтaв и пoвepxнocть</div>
+			<p class="text">
+				Существует несколько моделей ее строения. По самой реалистичной, Венера имеет 3 оболочки. Первая – кора,
+				толщина которой составляет 16 км. Вторая – мантия. Это оболочка, которая простирается на глубину 3300 км.
+				Так как у планеты нет магнитного поля, считают, что в ядре нет электрического тока, который его вызывает.
+				Значит, ядро находится в твердом состоянии. В центре плотность достигает 14 г/см³. Большое количество
+				деталей рельефа планеты имеет женские имена.
+
+
+			</p>
+
+			<div class="image">
+				<figure>
+					<div class="ims">
+						<img src="img/venus/Venus_structure.jpg" alt="">
+						<figcaption>
+							<h6>
+								Bнутpeнняя cтpуктуpa Beнepы
+							</h6>
+						</figcaption>
+					</div>
+				</figure>
+			</div>
+
+			<p class="text">
+				Аппараты «Венера-16» и «Венера-15» зафиксировали часть северного полушария Венеры. С 1989 по 1994 г.
+				«Магеллан» произвел более точное картографирование планеты. Здесь были обнаружены древние вулканы, которые
+				извергают лаву, горы, арахноиды, кратеры. Кора очень тонкая, так как она ослаблена высокой температурой.
+				<br>
+				Ударные кратеры являются редким элементом пейзажа планеты. На всей поверхности имеется приблизительно 1000
+				кратеров.
+			</p>
+		</div>
+		<div id="venus_atmosphere">
+			<div class="item1">Aтмocфepa и тeмпepaтуpa</div>
+
+			<div class="image">
+				<figure>
+					<div class="ims">
+						<img src="img/venus/venus-earth-atmosphere.jpg" alt="">
+						<figcaption>
+							<h6>
+								Сравнение Атмосферы Земли и Венеры
+							</h6>
+						</figcaption>
+					</div>
+				</figure>
+			</div>
+
+			<p class="text">
+				Атмосфера планеты это глобальный ураган кружащийся круглосуточно миллионы лет. Скорости ветров у кромки
+				облаков достигают 140 метров в секунду, но ближе к поверхности движения атмосферных потоков практически
+				нет. Венера имеет в 100 раз более массивную атмосферу чем её сестра Земля.
+				<br>
+				Воздухом Венеры дышать нельзя, он состоит в основном из углекислого газа и азота, для нас это яд!
+				Кислорода там практически нет, а в облаках имеются вкрапления концентрированной серной кислоты. На Венере
+				и сверкают грозы и льют серные дожди, но они не разъедают кору небесного тела, а испаряются не достигая
+				ее поверхности. К сожалению, природа этой планеты адская.
+			</p>
+			<p class="text">
+				Температура на поверхности вообще поражает наше воображение!Там стоит жуткая жара, при которой легко
+				плавится свинец.
+				<br>
+				Дело в том, что этот облачный слой довольно легко пропускает сквозь себя солнечный свет. Он доходит до
+				поверхности венеры и нагревает поверхность. Поверхность планеты как-бы хочет охладиться и излучает
+				инфракрасное излучение. Инфракрасный свет сквозь эту плотную атмосферу выходит, но с большим трудом. На
+				Земле он довольно легко выходит, а там инфракрасный свет оказывается запертым. Тепло приходит на
+				поверхность, но не может выбраться оттуда. Это называется: — Парниковый эффект.
+			</p>
+
+
+			<div class="image">
+				<figure>
+					<div class="ims">
+						<img src="img/venus/3c4bd875a40348338177920a6e44780c.jpg" alt="">
+						<figcaption>
+							<h6>Рельеф Венеры</h6>
+						</figcaption>
+					</div>
+				</figure>
+			</div>
+		</div>
+		<div id="of_venus">
+			<div class="item1">Наблюдение за Венерой</div>
+			<p class="text">
+				Венеру очень легко распознать. Она сияет гораздо ярче любых звезд. Ее можно отличить благодаря ровному
+				белому цвету. Как и Меркурий, она не отходит от Солнца на большое расстояние. Она может удалиться от желтой
+				звезды на 47,8 градусов в моменты элонгаций. У Венеры, как и Меркурия, есть периоды вечерней и утренней
+				видимости. В древние времена считали, что вечерняя и утренняя Венера – это две разные звезды. Даже в
+				небольшой телескоп можно легко пронаблюдать изменения видимой фазы ее диска. Впервые его наблюдал Галилей в
+				1610 году.
+			</p>
+
+			<div class="image">
+				<figure>
+					<div class="ims">
+						<img src="img/venus/2dddeb8830a3fc535572fd78793a1f2e.jpg" alt="">
+						<figcaption>
+							<h6> Созвездие </h6>
+						</figcaption>
+					</div>
+				</figure>
+			</div>
+		</div>
+		<div id="disk_sun">
+			<div class="item1">Прохождение по диску Солнца</div>
+
+			<p class="text">
+				Венера выглядит как маленький черный диск на фоне большого светила. Но это явление очень редкое. За 2,5
+				столетия происходит 4 прохождения – 2 июньских и 2 декабрьских. Последнее мы могли наблюдать 6 июня 2012 г.
+				11 декабря 2117 года ожидается следующее прохождение. Астроном Хоррокс впервые наблюдал это явление 4
+				декабря 1639 года. Именно он его и вычислил.
+			</p>
+
+			<div class="image">
+				<figure>
+					<div class="ims">
+						<img src="img/venus/31812e0612de7864ee0ae02b2caa75bd.jpg" alt="">
+						<figcaption>
+							<h6>
+								Венера выглядит как маленький черный диск на фоне большого светила
+							</h6>
+						</figcaption>
+					</div>
+				</figure>
+			</div>
+		</div>
+		<div id="sputnik">
+			<div class="item1">Спутники Венеры</div>
+
+			<p class="text">
+				Венера, как и Меркурий, не имеет естественных спутников. Раньше существовало множество заявлений об их
+				существовании, но все они были основаны на ошибке. Эти поиски были практически завершены к 1770 году. Ведь
+				во время наблюдения прохождения планеты по диску Солнца признаков существования спутника не обнаружили. У
+				Венеры есть квазиспутник, который обращается вокруг Солнца так, что между Венерой и ним существует
+				орбитальный резонанс, астероид 2002 VE. В 19 веке считали, что Меркурий является спутником Венеры.
+			</p>
+
+			<div class="image">
+				<figure>
+					<div class="ims">
+						<img src="img/venus/d01dc281cda5378b237cda3e0a2e512a.jpg" alt="">
+						<figcaption>
+							<h6>
+								Венера, как и Меркурий, не имеет естественных спутников
+							</h6>
+						</figcaption>
+					</div>
+				</figure>
+			</div>
+		</div>
+
+		<div id="Colonization">
+			<div class="item1">Колонизация Венеры</div>
+			<p class="text">
+				Самый главный вопрос, который интересует земное общество: — Можно ли поселиться на Венере? Иными словами,
+				терраформировать ее или каким-либо иным способом колонизировать.
+			</p>
+			<p class="text">
+				Существует интересный нюанс, обширная атмосфера Венеры, состоит из множества слоёв, условия в
+				которых значительно отличаются друг от друга. Среди них, людей особенно интересует слой расположенный чуть
+				выше 50 и чуть ниже 65 км от поверхности.
+			</p>
+			<p class="text">
+				Температуры там от + 20°C до + 37°C и давление сходно с земных. И именно здесь планируется
+				создать летающую
+				колонию, состоящую из огромных кораблей, оснащенных титаническими шарами покрытыми защитным тефлоновым
+				слоем. У Венеры присутствует озоновый слой, а это естественный экран от солнечного излучения на такой
+				высоте.
+			</p>
+		</div>
+
+		<div class="video" id="ru">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/WR2HQzg8eCY" frameborder="0"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+				allowfullscreen></iframe>
+		</div>
+
+		<div class="video" id="en">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/BvXa1n9fjow" frameborder="0"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+				allowfullscreen></iframe>
+		</div>
+
+
+
+
+	</div>
+
+
+	<div class="page-bg">
+		<div class="animation-wrapper">
+			<div class="particle particle-1"></div>
+			<div class="particle particle-2"></div>
+			<div class="particle particle-3"></div>
+			<div class="particle particle-4"></div>
+		</div>
+	</div>
+
+	<footer>
+		<div class="block">
+			<!-- <a href="" class="footer-logo">
+				<br>Интересное о космос</a>
+			-->
+			<ul class="m3nu">
+				<li class=" active">
+					<a href="index.html">Главная</a>
+				</li>
+				<li class="">
+					<a href="#about">Созвездие</a>
+				</li>
+				<li class="">
+					<a href="pac.html">Солнечная система</a>
+				</li>
+				<li class="">
+					<a href="#contact">Звезды</a>
+				</li>
+				<li class="">
+					<a href="#contact">Планеты</a>
+				</li>
+				<li class="">
+					<a href="#contact">Карликовые планеты</a>
+				</li>
+				<li class="">
+					<a href="#contact">Спутники</a>
+				</li>
+			</ul>
+			<p class="copyright-text"><a href="mailto:nikolainedelko777@mail.com">Cosmo&copy;gmail.com </a>| Все
+				интересное о
+				космосе</p>
+		</div>
+	</footer>
+
+
+
+	<script src="/js/particles/particles.js" defer></script>
+	<script src="/js/particles/app.js" defer></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" defer></script>
+	<script src="js/scroll.js" defer></script>
+
+
+</body>
+
+</html>

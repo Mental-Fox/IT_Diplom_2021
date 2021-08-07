@@ -1,0 +1,1785 @@
+/*Обнуление*/
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+*,
+*:before,
+*:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+:focus,
+:active {
+	outline: none;
+}
+
+a:focus,
+a:active {
+	outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+	display: block;
+}
+
+html,
+body {
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+	font-family: inherit;
+}
+
+input::-ms-clear {
+	display: none;
+}
+
+button {
+	cursor: pointer;
+}
+
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+
+a,
+a:visited {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+ul li {
+	list-style: none;
+}
+
+img {
+	vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: inherit;
+	font-weight: inherit;
+}
+
+/*-------------------------------------------------------------------*/
+
+
+
+
+
+/*Виджет переводчика*/
+.ytWidget {
+	opacity: 1;
+	position: fixed;
+	right: 0px;
+	margin-top: 103px;
+	margin-right: 10px;
+	z-index: 100;
+}
+
+/*Заголовок первой странице*/
+.solntse {
+	color: #fff;
+	font-size: 55px;
+	text-align: center;
+	text-transform: uppercase;
+	font-family: monospace;
+	margin: 150px 0px 50px 0px;
+}
+
+.har_planet {
+	background-color: hsl(0, 0%, 0%, 0.3);
+}
+
+
+.block-qart {
+	left: 15.5%;
+	top: 80.3%;
+	width: 610px;
+	position: absolute;
+	z-index: 100;
+
+	filter: grayscale(1%);
+	padding: 20px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+
+#container-9 {
+	width: 600px;
+	height: 200px;
+	background-size: cover;
+	margin: 20px;
+	margin: 0 auto;
+}
+
+
+.zvuk {
+	position: absolute;
+	top: 55%;
+}
+
+.modelbutt3d {
+	background: #bbd7eebf;
+	background-color: rgb(187, 215, 238);
+	border-radius: 10px;
+	padding: 20px 10px;
+	margin: 20px;
+	font-size: 18px;
+	display: inline-block;
+	cursor: pointer;
+	text-transform: uppercase;
+	font-family: Arial, Helvetica, sans-serif;
+	opacity: 0.5;
+	transition: 0.5s;
+
+}
+
+.start {
+	animation: 1s radial-pulse 3s infinite;
+}
+
+
+@keyframes radial-pulse {
+	0% {
+		box-shadow: 0px 0px 50px 2px rgb(255, 255, 255);
+	}
+
+	50% {
+		box-shadow: 0px 0px 20px 1px rgba(102, 154, 231, 0);
+	}
+
+	100% {
+		box-shadow: 0px 0px 20px 1px rgb(102, 154, 231, 0);
+	}
+}
+
+.modelbutt3d:hover {
+	opacity: 1;
+	box-shadow: 0px 0px 20px 1px rgb(102, 154, 231);
+	/*color: rgb(187, 215, 238);*/
+	transition: 1s;
+	color: #0f2846;
+	letter-spacing: 0.5px;
+
+}
+
+.model3d {
+	background: #bbd7eebf;
+	margin-bottom: 100px;
+	background-color: rgb(187, 215, 238);
+	border-radius: 10px;
+	padding: 20px 20px;
+	text-align: center;
+	font-size: 20px;
+	display: inline-block;
+	text-decoration: none;
+	cursor: pointer;
+	text-transform: uppercase;
+	font-family: monospace;
+	opacity: 0.5;
+	transition: 0.5s;
+}
+
+.model3d:hover {
+	opacity: 1;
+	/*box-shadow: 0px 0px 5px 1px rgb(102, 154, 231);*/
+	box-shadow: 0 0 20px rgb(102, 154, 231),
+		0 0 40px rgb(102, 154, 231);
+	/*color: rgb(187, 215, 238);*/
+	transition: 0.5s;
+	letter-spacing: 1px;
+	color: #0f2846;
+}
+
+
+.siri {
+	position: absolute;
+	left: 0em;
+	top: -9em;
+	width: 610px;
+
+}
+
+
+/* ----------------------- Блок характеристик планет----------------------------- */
+.block-har {
+	left: 15.5%;
+	top: 55%;
+	width: 610px;
+	background-color: hsl(0, 0%, 0%, 0.3);
+	padding: 20px;
+	border-radius: 0 0 20px 20px;
+	position: absolute;
+	z-index: 100;
+	color: white;
+
+}
+
+.har {
+	padding: 0;
+	list-style: none;
+}
+
+.har li {
+	padding: 6px;
+	outline: unset;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.relf,
+.anim-show {
+	opacity: 0;
+	/*Элемент полностью прозрачный (невидимый)*/
+	transition: 1s;
+	/*Скорость перехода состояния элемента*/
+	animation: show 10s 1;
+	/* Указываем название анимации, её время и количество повторов*/
+	animation-fill-mode: forwards;
+	/* Чтобы элемент оставался в конечном состоянии анимации */
+	animation-delay: 1s;
+	/* Задержка перед началом */
+}
+
+@keyframes show {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+/* ---------------------------------------------------- */
+
+
+/*Иконки соц сетей*/
+.fa {
+	text-align: center;
+	width: 40px;
+	height: 40px;
+	background: #bbd7ee;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15), inset 0 0 50px rgba(0, 0, 0, 0.1);
+	border-radius: 10px;
+	margin-top: 30px;
+	padding: 6px;
+	color: #000;
+}
+
+.fa:hover {
+	opacity: 0.8;
+}
+
+.fa-google:hover {
+	background: #dd6d39;
+	box-shadow: 0 0 10px #dd6d39, 0 0 20px #dd6d39, 0 0 30px #dd6d39, 0 0 50px #dd6d39;
+	color: white;
+}
+
+.fa-linkedin:hover {
+	background: #007bb5;
+	box-shadow: 0 0 10px #3d8db3, 0 0 20px #3d8db3, 0 0 30px #2989b6, 0 0 70px #007bb5;
+	color: white;
+}
+
+.fa-youtube:hover {
+	background: #bb0000;
+	box-shadow: 0 0 10px #f34a4a, 0 0 20px #f34a4a, 0 0 30px #f34a4a, 0 0 50px #f34a4a;
+	color: white;
+}
+
+.fa-instagram:hover {
+
+	background: #d6249f;
+	background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+	box-shadow: 0 0 5px #fdf497, 0 0 10px #fd5949, 0 0 20px #d6249f, 0 0 70px #285AEB;
+	color: white;
+}
+
+.fa-vk:hover {
+	background: #45668e;
+	box-shadow: 0 0 10px #6081aa, 0 0 20px #6081aa, 0 0 30px #496b94, 0 0 80px #2f5d96;
+	color: white;
+
+}
+
+/*Картинка*/
+.ims img {
+	display: block;
+
+	position: relative;
+
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 20px;
+	height: auto;
+	width: 70%;
+	transition: box-shadow .25s, -webkit-box-shadow .25s, transform .60s;
+	-webkit-box-shadow: 0 2px 2px 0 rgb(0 0 0 / 20%), 0 3px 1px -2px rgb(0 0 0 / 40%), 0 5px 5px 0 rgb(0 0 0 / 60%);
+
+	/* box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%), 0 1px 5px 0 rgb(0 0 0 / 20%);*/
+}
+
+
+.ims img:hover {
+	transition: box-shadow .25s, -webkit-box-shadow .25s, transform .60s;
+	-webkit-box-shadow: 0 8px 20px 0 rgb(0 0 0 / 40%), 0 6px 20px 0 rgb(0 0 0 / 60%);
+	box-shadow: 0 8px 20px 0 rgb(0 0 0 / 40%), 0 6px 20px 0 rgb(0 0 0 / 60%);
+	transform: scale(0.95);
+
+}
+
+ul.lishka {
+	padding-left: 45px;
+	text-indent: 10px;
+	font-size: 18px;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+/*Картинка с цитатой*/
+.image {
+	margin-left: auto;
+	margin-right: auto;
+	-webkit-transition: all 0.5s linear;
+	-o-transition: all 0.5s linear;
+	-moz-transition: all 0.5s linear;
+	margin-top: 20px;
+	margin-bottom: 15px;
+}
+
+/*.image:hover {
+	transform: scale(0.89);
+}*/
+
+.image:hover figcaption {
+	opacity: 1;
+	transition: opacity .25s;
+
+}
+
+figcaption {
+	opacity: 0;
+	text-align: center;
+	transition: opacity .25s;
+}
+
+figure {
+	color: #282828;
+	font-family: 'monospace';
+	margin-bottom: 30px;
+}
+
+.tet {
+	height: 150px;
+}
+
+
+.block-har p {
+	text-indent: 0;
+	font-size: 25px;
+	padding: 0;
+	list-style: none;
+}
+
+/*Для загрузки сайта */
+/*
+#hellopreloader_preload {
+	display: block;
+	position: fixed;
+	z-index: 99999;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	min-width: 1000px;
+	background: #111111 url(http://hello-site.ru//main/images/preloads/ball-triangle.svg) center center no-repeat;
+	background-size: 200px;
+}*/
+
+/*Модальное Окно*/
+.popup-fade:before {
+	content: '';
+	background: #000;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0.8;
+	z-index: 9999;
+
+}
+
+.popup:before {
+	content: '';
+	background: rgb(31, 31, 31);
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0.4;
+}
+
+.popup-fade {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 90vh;
+}
+
+.popup {
+	position: fixed;
+	align-items: center;
+	justify-content: center;
+
+	width: 700px;
+
+	background-color: #bbd7ee80;
+	background: url(/img/pop/pop.png) no-repeat;
+
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	color: #d7e2f1;
+	box-shadow: 0px 0px 10px 0px #95c0e4;
+	border-radius: 4px;
+	z-index: 9999;
+	opacity: 1;
+	transition: all 0.5s linear;
+	-webkit-transition: all 0.5s linear;
+	-o-transition: all 0.5s linear;
+	-moz-transition: all 0.5s linear;
+}
+
+@keyframes spin {
+	from {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+img#right-saturn,
+#top-planet,
+#saturn {
+	animation: 5s linear 0s infinite;
+}
+
+.popup:hover {
+
+	box-shadow: 0px 10px 40px 0px rgb(149, 192, 228);
+	transition: all 0.5s linear;
+	-webkit-transition: all 0.5s linear;
+	-o-transition: all 0.5s linear;
+	-moz-transition: all 0.5s linear;
+}
+
+.popup p {
+	margin-top: 20px;
+	font-size: 18px;
+	line-height: 20px;
+	text-align: justify;
+}
+
+.popup img {
+	margin: 0px 20px;
+	float: right;
+	border-radius: 15px;
+}
+
+.popup ul li {
+	font-size: 18px;
+	margin-left: 80px;
+	list-style: square;
+}
+
+.popup-close {
+	top: -1px;
+	right: -1px;
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	padding: 0;
+
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px;
+	background-color: rgba(61, 61, 61, 0.8);
+	-webkit-box-shadow: 0px 0px 10px #000;
+	-moz-box-shadow: 0px 0px 10px #000;
+	box-shadow: 0px 0px 10px #000;
+	text-align: center;
+	text-decoration: none;
+
+	font: 13px/20px 'Tahoma', Arial, sans-serif;
+	font-weight: bold;
+	-webkit-transition: all ease .8s;
+	-moz-transition: all ease .8s;
+	-ms-transition: all ease .8s;
+	-o-transition: all ease .8s;
+	transition: all ease .8s;
+}
+
+.popup-close:before {
+	color: rgba(255, 255, 255, 0.9);
+	text-shadow: 0 -1px rgba(0, 0, 0, 0.9);
+	background-image: url("/img/icon/milky-way.png");
+	content: "";
+	font-size: 14px;
+}
+
+.popup-close:hover {
+	background-color: rgba(252, 20, 0);
+	-webkit-transform: rotate(360deg);
+	-moz-transform: rotate(360deg);
+	-ms-transform: rotate(360deg);
+	-o-transform: rotate(360deg);
+	transform: rotate(360deg);
+}
+
+#circles {
+	position: absolute;
+	z-index: -10;
+}
+
+#circle1 {
+	width: 6px;
+	height: 6px;
+	background: #ffffff;
+	border-radius: 50%;
+	box-shadow:
+		0px 0px 30px 12px hsla(216, 73%, 65%, 0.514),
+		0px 0px 60px 8px hsla(216, 73%, 65%, 0.651),
+		0px 0px 90px 8px hsla(216, 73%, 65%, 0.918),
+		0px 0px 120px 12px #6599e7,
+		0px 0px 140px 8px hsl(216, 74%, 55%),
+		0px 0px 160px 8px hsl(283, 82%, 50%),
+		0px 0px 180px 20px hsl(0, 84%, 53%);
+}
+
+body {
+	overflow-x: hidden;
+	font-size: 24px;
+	line-height: 40px;
+	font-family: monospace;
+}
+
+.wrapper {
+	display: flex;
+	min-height: 100%;
+	overflow: hidden;
+	flex-direction: column;
+}
+
+/*Видео в конце странице*/
+.video {
+	position: relative;
+	padding-bottom: 56.25%;
+	/* задаёт высоту контейнера для 16:9 (если 4:3 — поставьте 75%) */
+	height: 0;
+	overflow: hidden;
+	margin-top: 30px;
+}
+
+.video iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 90%;
+	border-width: 0;
+	outline-width: 0;
+}
+
+
+
+
+/*Карточки с планетами */
+.cards_list_planet {
+	z-index: 0;
+	width: 100%;
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+}
+
+.card_platnet {
+	margin: 8px;
+	width: 230px;
+	height: 280px;
+	line-height: 1.8;
+	border-radius: 20px;
+	box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.20), -5px -5px 30px 7px rgba(0, 0, 0, 0.15);
+	cursor: pointer;
+	transition: 0.4s;
+	background-color: #e0e5ec;
+	opacity: 0.6;
+}
+
+.card_platnet img {
+	width: 250px;
+	height: 250px;
+	padding-right: 10px;
+}
+
+.cards_list_planet:hover .card_platnet {
+	background-color: #e0e5ec;
+	opacity: 0.7;
+	transform: scale(.9);
+	box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.20), -5px -5px 30px 7px rgba(0, 0, 0, 0.15);
+}
+
+.card_platnet:hover {
+	box-shadow: 5px 5px 30px 15px rgba(0, 0, 0, 0.25),
+		-5px -5px 30px 15px rgba(0, 0, 0, 0.22);
+}
+
+.cards_list_planet:hover .card_platnet:hover {
+	transform: scale(1);
+	filter: blur(0px);
+	opacity: 1;
+	box-shadow: 0 8px 20px 0px rgba(0, 0, 0, 0.125);
+}
+
+.card_platnet p {
+	font-family: monospace;
+	text-align: center;
+	font-size: 18px;
+	color: #181818;
+	text-indent: 0;
+	height: 50px;
+	opacity: 0.6;
+	margin-top: -30px;
+}
+
+
+
+
+
+/*Карточки с интереснными фактами */
+.cards-list {
+	z-index: 0;
+	width: 100%;
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+}
+
+.card {
+	margin: 8px;
+	width: 260px;
+	height: 180px;
+	line-height: 1.8;
+
+
+	border-radius: 20px;
+	box-shadow: 0 8px 20px 0px #d3e1f7cc;
+	cursor: pointer;
+	transition: 1s;
+	background-color: #d3e1f7cc;
+	box-shadow: inset 3px 3px 7px #FFFFFF, inset -3px -3px 7px #bbd7ee;
+}
+
+.card_title p {
+	font-family: monospace;
+	text-align: center;
+	border-radius: 0px 0px 40px 40px;
+	font-size: 16px;
+	transition: 0.5s;
+	text-indent: 0;
+	height: 50px;
+}
+
+.card:hover {
+	/*transform: scale(0.9, 0.9);*/
+	letter-spacing: 1px;
+	box-shadow: inset 3px 3px 7px #FFFFFF, inset -3px -3px 7px #bbd7ee;
+}
+
+
+.cards-list:hover .card {
+
+	/*filter: invert(1%);
+	opacity: 0.6;
+	transform: scale(.97);*/
+
+}
+
+.cards-list:hover .card:hover {
+	/*transform: scale(.97);
+	/*background-color: #9cb7ddcc;*/
+	filter: invert(12%);
+	opacity: 1;
+	box-shadow: inset 3px 3px 7px #FFFFFF, inset -3px -3px 7px #bbd7ee;
+}
+
+.title-white {
+	color: white;
+}
+
+.title-black {
+	color: black;
+}
+
+@media all and (max-width: 500px) {
+	.card-list {
+		/* On small screens, we are no longer using row direction but column */
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+
+
+
+/*Меню*/
+.top-menu {
+	height: 50px;
+	width: 100%;
+	font-family: monospace;
+	text-transform: uppercase;
+	display: flex;
+	justify-content: center;
+	/*z-index: 100;
+  position: sticky;
+  top: 0;*/
+}
+
+.top-menu li {
+	list-style: none;
+	/*Убираем маркер*/
+	text-align: center;
+	display: inline-block;
+	/*Выстраиваем пункты в ряд*/
+	background: rgba(17, 17, 17, 0.171);
+	position: relative;
+}
+
+.top-menu li a:hover {
+	background-color: rgba(43, 48, 59, 0.582);
+	text-shadow: 0 0 10px #FFF, 0 0 1em blue, 0 0 0.2em rgb(158, 158, 212);
+}
+
+.top-menu li a {
+	text-decoration: none;
+	color: #bbd7ee;
+	/* #deb887, 87a3de  669ae7  9087de*/
+	text-transform: none;
+	font-family: monospace;
+	display: block;
+	padding: 4px 20px;
+	font-size: 18px;
+	transition: background-color .05s ease-in-out;
+}
+
+.top-menu li ul {
+	display: none;
+	/*Прячем выпадающее меню*/
+	position: absolute;
+}
+
+.top-menu li:hover ul {
+	display: flex;
+	/*Показываем выпадающее меню при наведение*/
+	left: 0px;
+}
+
+.main {
+	display: flex;
+	justify-content: center;
+}
+
+
+/*Цитата*/
+h6 {
+	padding-top: 5px;
+	font-size: 26px;
+	display: block;
+	/* Блочный элемент (для старых браузеров) */
+	text-align: center;
+	/* Выравнивание по центру */
+	font-style: italic;
+	/* Курсивное начертание */
+	margin-top: 0;
+	/* Отступ сверху */
+	margin-bottom: 5px;
+	/* Отступ снизу */
+	color: rgb(58, 57, 57);
+	/* Цвет подрисуночной подписи */
+	/*	text-shadow: 0px 20px 10px #000;*/
+}
+
+
+#chatbro {
+
+	opacity: 0.6;
+	z-index: 100;
+
+
+}
+
+/*Контент*/
+.content {
+	background-color: #bbd7eebf;
+	border-radius: 10px 10px 0px 0px;
+	max-width: 1300px;
+	margin: 0 auto;
+	padding: 40px;
+	box-shadow: 0px 0px 80px 4px rgba(163, 177, 198, 0.6), 0px 0px 80px 4px #669ae7,
+		inset 3px 3px 7px #FFFFFF, inset -3px -3px 7px #FFFFFF;
+}
+
+.content {
+	flex: 1 1 auto;
+}
+
+.contents footer {
+	max-width: 1100px;
+	margin: 0px auto;
+	padding: 0px 105px;
+}
+
+.content h2 {
+	font: 30px;
+	color: #444;
+	text-align: center;
+}
+
+.content p {
+	font: 14px;
+	color: #000;
+	text-align: 20px;
+}
+
+.item__image {
+	flex: 0 0 200px;
+}
+
+.item__body {
+	padding: 0px 0px 0px 15px;
+	flex: 1 1 auto;
+}
+
+/*Меню в контенте*/
+.meny a {
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	font-size: 20px;
+	color: #456;
+	display: block;
+	text-decoration: none;
+	text-align: center;
+	/*	text-decoration: line-through  ;
+	text-transform: uppercase;*/
+}
+
+.meny a:hover {
+	/*  background-color: #fff;*/
+	color: #000;
+}
+
+/*абзацы*/
+.text {
+	text-align: justify;
+	text-indent: 50px;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	font-weight: 500;
+	font-size: 18px;
+}
+
+p {
+	text-indent: 50px;
+	padding: 10px;
+}
+
+
+/*Заголовки*/
+.item1 {
+	color: #1d1d1d;
+	font-size: 24px;
+	text-align: center;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	margin-top: 40px;
+	margin-bottom: 30px;
+}
+
+.item2 {
+	color: rgb(116, 38, 38);
+	font-size: 24px;
+	text-align: center;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	margin-top: 40px;
+	margin-bottom: 30px;
+}
+
+/*.footer {
+    display: block;
+   height: 40% ;
+    border-radius:0px 0px 10px 10px ; /* Уголки 
+    background: url(../img/footer/foot.jpg) center no-repeat fixed;
+    opacity: 0.7; 
+    margin-bottom: 30px;
+    padding: 10px 20px;
+    box-shadow: 0px 0px 30px rgba(163, 177, 198, 0.6), 0px 0px 30px rgba(255, 255, 255, 0.5),
+    inset 0px 0px 10px rgba(136, 165, 191, 0.48), inset 0px 0px 5px #FFFFFF;
+}*/
+
+
+/*Подвал*/
+footer {
+	max-width: 1300px;
+	opacity: 0.6;
+	text-align: center;
+	box-shadow: 0px 0px 80px 4px rgba(163, 177, 198, 0.6), 0px 0px 80px 4px rgb(102, 154, 231);
+	background: url(../img/footer/foot.jpg);
+	margin: 0 auto;
+	margin-bottom: 30px;
+	border-radius: 0px 0px 10px 10px;
+
+	/* Уголки */
+}
+
+footer p.copyright-text {
+	font-weight: 300;
+	font-size: 12px;
+	color: #fff;
+	letter-spacing: 3px;
+	font-family: monospace;
+}
+
+footer p.copyright-text a {
+	color: rgb(187, 215, 238);
+	font-family: monospace;
+}
+
+footer p.copyright-text a:hover {
+	text-decoration: none;
+}
+
+
+/*Меню в подвале*/
+.m3nu li {
+	display: inline-block;
+	margin: 0 5px;
+}
+
+.m3nu a {
+	text-decoration: none;
+	position: relative;
+	display: inline-block;
+	transition: color .3s ease-out;
+}
+
+.m3nu a {
+	padding: 0px 20px;
+	color: rgb(187, 215, 238);
+	margin-top: 30px;
+	font-family: monospace;
+	font-size: 16px;
+	font-weight: bold;
+	text-transform: none;
+	display: block;
+	padding: 1px 20px;
+	transition: background-color 0.5s ease-in-out;
+}
+
+.m3nu a {
+	text-decoration: none;
+	position: relative;
+	display: inline-block;
+	transition: color .3s ease-out;
+}
+
+.m3nu a::before {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	bottom: 0;
+	left: 0;
+	height: 1px;
+	width: 100%;
+	background: rgb(187, 215, 238);
+	border-radius: 10px;
+	transition: height .3s ease-out;
+}
+
+.m3nu a:hover {
+	color: #000;
+}
+
+.m3nu a:hover::before {
+	height: 100%;
+}
+
+
+/*Кнопка с игрой в подвале*/
+.kick a {
+	text-decoration: none;
+	display: inline-block;
+	transition: color .3s ease-out;
+}
+
+.kick a {
+	justify-content: center;
+	margin: 0px 420px;
+	color: rgb(187, 215, 238);
+	margin-top: 10px;
+	font-family: monospace;
+	font-size: 18px;
+	font-weight: bold;
+	display: flex;
+	transition: background-color 0.5s ease-in-out;
+}
+
+.kick a:hover {
+	color: #000;
+}
+
+.kick a:hover::before {
+	height: 100%;
+}
+
+.kick a::before {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	bottom: 0;
+	left: 0;
+	height: 1px;
+	width: 100%;
+	background: rgb(187, 215, 238);
+	border-radius: 10px;
+	transition: height .3s ease-out;
+}
+
+/*Кнопка вверх с анимацией*/
+.scrollup {
+	display: inline-block;
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+	-webkit-transition-property: transform;
+	transition-property: transform;
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+
+.scrollup:hover,
+.scrollup:focus,
+.scrollup:active {
+	-webkit-transform: translateY(-6px);
+	transform: translateY(-6px);
+	-webkit-animation-name: hover;
+	animation-name: hover;
+	-webkit-animation-duration: 1.5s;
+	animation-duration: 1.5s;
+	-webkit-animation-delay: 5.0s;
+	animation-delay: 5.0s;
+	-webkit-animation-timing-function: linear;
+	animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+	-webkit-animation-direction: alternate;
+	animation-direction: alternate;
+}
+
+.scrollup {
+	width: 100px;
+	height: 100px;
+	opacity: 0.3;
+	position: fixed;
+	bottom: 50px;
+	right: 60px;
+	display: none;
+	text-indent: -9999px;
+	z-index: 100;
+	opacity: 1;
+	background: url(../img/icon_top.png) no-repeat;
+}
+
+.scrollup:hover {
+	opacity: 1;
+	width: 100px;
+	height: 100px;
+	border-radius: 50px;
+	background: url(../img/scroll.png) no-repeat;
+	box-shadow: 2px 0px 55px 10px #669ae7;
+}
+
+
+/*Блок с планетами на первой странице*/
+section {
+	display: block;
+	position: relative;
+	background: #090a0f;
+	border-radius: 30px;
+	box-shadow: 0px 2px 10px rgba(15, 19, 44, 0.9),
+		inset 3px 3px 7px rgba(136, 165, 191, 0.48), inset -3px -3px 7px #555;
+}
+
+/* Solar System Styles */
+ul.solarsystem {
+	position: relative;
+	height: 690px;
+	list-style: none;
+	-webkit-transition: all 0.09s ease-in;
+	-moz-transition: all 0.09s ease-in;
+	-o-transition: all 0.09s ease-in;
+	transition: all 0.09s ease-in;
+	overflow: hidden;
+}
+
+ul.solarsystem li {
+	text-indent: -9999px;
+	display: block;
+	position: absolute;
+	border: 2px solid #394057;
+	opacity: 0.7;
+}
+
+ul.solarsystem li span {
+	display: block;
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+ul.solarsystem li.active {
+	border-color: #aa4200;
+}
+
+ul.solarsystem li.active.sun,
+ul.solarsystem li.active span {
+	-webkit-transform: scale(1.3);
+	-moz-transform: scale(1.3);
+	-o-transform: scale(1.3);
+	transform: scale(1.3);
+}
+
+ul.solarsystem li.active.sun span,
+ul.solarsystem li.active.earth .moon {
+	border: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+
+ul.solarsystem li.sun {
+	width: 40px;
+	height: 40px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	background: #fc3;
+	background-image: -webkit-gradient(linear,
+			left bottom,
+			left top,
+			color-stop(0.22, rgb(204, 153, 0)),
+			color-stop(1, rgb(255, 219, 112)));
+	background-image: -moz-linear-gradient(center bottom,
+			rgb(204, 153, 0) 22%,
+			rgb(255, 219, 112) 100%);
+	top: 302px;
+	left: 462px;
+	border: none;
+	-webkit-box-shadow: 0 0 30px #c90;
+	-moz-box-shadow: 0 0 30px #c90;
+	box-shadow: 0 0 30px #c90;
+	z-index: 100;
+	-webkit-transition: all 0.2s ease-in;
+	-moz-transition: all 0.2s ease-in;
+	-o-transition: all 0.2s ease-in;
+	transition: all 0.2s ease-in;
+}
+
+ul.solarsystem li.sun span {
+	width: 60px;
+	height: 60px;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+}
+
+ul.solarsystem li.mercury {
+	width: 100px;
+	height: 100px;
+	-webkit-border-radius: 52px;
+	-moz-border-radius: 52px;
+	border-radius: 52px;
+	top: 270px;
+	left: 430px;
+	z-index: 99;
+}
+
+ul.solarsystem li.mercury span {
+	background: #b6bac5;
+	top: 10px;
+	left: 10px;
+}
+
+ul.solarsystem li.venus {
+	width: 160px;
+	height: 160px;
+	-webkit-border-radius: 82px;
+	-moz-border-radius: 82px;
+	border-radius: 82px;
+	top: 240px;
+	left: 400px;
+	z-index: 98;
+}
+
+ul.solarsystem li.venus span {
+	background: #bf8639;
+	top: 118px;
+	left: 5px;
+}
+
+ul.solarsystem li.earth {
+	width: 220px;
+	height: 220px;
+	-webkit-border-radius: 112px;
+	-moz-border-radius: 112px;
+	border-radius: 112px;
+	top: 210px;
+	left: 370px;
+	z-index: 97;
+}
+
+ul.solarsystem li.earth span {
+	background: #06c;
+	top: 56px;
+	left: 5px;
+}
+
+ul.solarsystem li.earth span.moon {
+	width: 4px;
+	height: 4px;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	background: #ccc;
+	top: 12px;
+	left: 12px;
+}
+
+ul.solarsystem li.mars {
+	width: 280px;
+	height: 280px;
+	-webkit-border-radius: 142px;
+	-moz-border-radius: 142px;
+	border-radius: 142px;
+	top: 180px;
+	left: 340px;
+	z-index: 96;
+}
+
+ul.solarsystem li.mars span {
+	background: #aa4200;
+	top: 0px;
+	left: 175px;
+}
+
+ul.solarsystem li.asteroids_meteorids {
+	top: 155px;
+	left: 315px;
+	z-index: 1;
+	background: url(http://neography.com/experiment/circles/solarsystem/asteroids_meteorids.png) no-repeat 0 0;
+
+	width: 330px;
+	height: 330px;
+	-webkit-border-radius: 165px;
+	-moz-border-radius: 165px;
+	border-radius: 165px;
+	border: none;
+}
+
+ul.solarsystem li.jupiter {
+	width: 340px;
+	height: 340px;
+	-webkit-border-radius: 172px;
+	-moz-border-radius: 172px;
+	border-radius: 172px;
+	top: 150px;
+	left: 310px;
+	z-index: 95;
+}
+
+ul.solarsystem li.jupiter span {
+	background: #e0ae6f;
+	top: 67px;
+	left: 24px;
+}
+
+ul.solarsystem li.saturn {
+	width: 400px;
+	height: 400px;
+	-webkit-border-radius: 202px;
+	-moz-border-radius: 202px;
+	border-radius: 202px;
+	top: 120px;
+	left: 280px;
+	z-index: 94;
+}
+
+ul.solarsystem li.saturn span {
+	background: #dfd3a9;
+	top: 24px;
+	left: 300px;
+}
+
+ul.solarsystem li.saturn span.ring {
+	width: 12px;
+	height: 12px;
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+	background: none;
+	border: 2px solid #5a4e34;
+	left: -3px;
+	top: -3px;
+	-webkit-transform: skewY(50deg);
+	-moz-transform: skewY(50deg);
+	-o-transform: skewY(50deg);
+	transform: skewY(50deg);
+}
+
+ul.solarsystem li.uranus {
+	width: 460px;
+	height: 460px;
+	-webkit-border-radius: 232px;
+	-moz-border-radius: 232px;
+	border-radius: 232px;
+	top: 90px;
+	left: 250px;
+	z-index: 93;
+}
+
+ul.solarsystem li.uranus span {
+	background: #82b3d1;
+	top: 7px;
+	left: 300px;
+}
+
+ul.solarsystem li.neptune {
+	width: 520px;
+
+	height: 520px;
+	-webkit-border-radius: 262px;
+	-moz-border-radius: 262px;
+	border-radius: 262px;
+
+	top: 60px;
+	left: 220px;
+	z-index: 92;
+}
+
+ul.solarsystem li.neptune span {
+	background: #77c2ec;
+	top: 0px;
+	left: 200px;
+}
+
+ul.solarsystem li.pluto {
+	width: 580px;
+	height: 580px;
+	-webkit-border-radius: 292px;
+	-moz-border-radius: 292px;
+	border-radius: 292px;
+	top: 30px;
+	left: 190px;
+	z-index: 91;
+}
+
+ul.solarsystem li.pluto span {
+	background: #7c6a5c;
+	top: 79px;
+	left: 79px;
+}
+
+ul#descriptions {
+	position: absolute;
+	top: 6%;
+	right: 100px;
+	list-style: none;
+}
+
+ul#descriptions h2 {
+	cursor: pointer;
+	color: #bbd7ee;
+	-webkit-transition: all 0.15s ease-in;
+	-moz-transition: all 0.15s ease-in;
+	-o-transition: all 0.15s ease-in;
+	transition: all 0.15s ease-in;
+	font-size: 20px;
+	position: relative;
+	z-index: 101;
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-o-transform: scale(1);
+	transform: scale(1);
+
+}
+
+ul#descriptions h2:hover {
+	color: #fff;
+	-webkit-transform: scale(1.08);
+	-moz-transform: scale(1.08);
+	-o-transform: scale(1.08);
+	transform: scale(1.08);
+}
+
+/*ul#descriptions:hover h2#mercury,#venus {
+    border-color: #aa4200;
+    }*/
+ul.solarsystem li.active {
+	border-color: #aa4200;
+}
+
+ul.solsys li.active h2.solarsys {
+	border-color: #aa4200;
+	cursor: pointer;
+}
+
+ul#descriptions p {
+	padding: 20px;
+	text-align: justify;
+	text-indent: 0;
+}
+
+ul#descriptions span {
+	color: #fff;
+}
+
+ul#descriptions h2 {
+	padding: 10px;
+	font-family: monospace;
+	font-size: 18px;
+	text-align: justify;
+	text-indent: 0;
+}
+
+ul#descriptions li p {
+	position: absolute;
+	left: -250px;
+	top: 0;
+	width: 270px;
+	display: inline;
+	opacity: 0.2;
+	visibility: hidden;
+	font-size: 16px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-webkit-transition: all 0.3s ease-in;
+	-moz-transition: all 0.3s ease-in;
+	-o-transition: all 0.3s ease-in;
+	transition: all 0.3s ease-in;
+	background: #161e24;
+
+	color: #8c8c8b;
+	line-height: 1.6;
+	z-index: 100;
+	box-shadow: 8px 7px 10px rgb(135, 180, 222);
+}
+
+ul#descriptions h2:hover+p {
+	visibility: visible;
+	opacity: 0.9;
+	left: -300px;
+}
+
+/* CSS3 Animations */
+ul.solarsystem li {
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-name: orbit;
+
+	-moz-animation-iteration-count: infinite;
+	-moz-animation-timing-function: linear;
+	-moz-animation-name: orbit;
+}
+
+ul.solarsystem li.earth span {
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-name: moon;
+
+	-moz-animation-iteration-count: infinite;
+	-moz-animation-timing-function: linear;
+	-moz-animation-name: moon;
+}
+
+ul.solarsystem li.mercury {
+	-webkit-animation-duration: 5s;
+	-moz-animation-duration: 5s;
+}
+
+ul.solarsystem li.venus {
+	-webkit-animation-duration: 8s;
+	-moz-animation-duration: 8s;
+}
+
+ul.solarsystem li.earth {
+	-webkit-animation-duration: 12s;
+	-moz-animation-duration: 12s;
+}
+
+ul.solarsystem li.earth span {
+	-webkit-animation-duration: 2s;
+	-moz-animation-duration: 2s;
+}
+
+ul.solarsystem li.mars {
+	-webkit-animation-duration: 20s;
+	-moz-animation-duration: 20s;
+}
+
+ul.solarsystem li.asteroids_meteorids {
+	-webkit-animation-duration: 50s;
+	-moz-animation-duration: 50s;
+}
+
+ul.solarsystem li.jupiter {
+	-webkit-animation-duration: 30s;
+	-moz-animation-duration: 30s;
+}
+
+ul.solarsystem li.saturn {
+	-webkit-animation-duration: 60s;
+	-moz-animation-duration: 60s;
+}
+
+ul.solarsystem li.uranus {
+	-webkit-animation-duration: 70s;
+	-moz-animation-duration: 70s;
+}
+
+ul.solarsystem li.neptune {
+	-webkit-animation-duration: 100s;
+	-moz-animation-duration: 100s;
+}
+
+ul.solarsystem li.pluto {
+	-webkit-animation-duration: 120s;
+	-moz-animation-duration: 120s;
+}
+
+@-webkit-keyframes orbit {
+	from {
+		-webkit-transform: rotate(0deg)
+	}
+
+	to {
+		-webkit-transform: rotate(360deg)
+	}
+}
+
+@-webkit-keyframes moon {
+	from {
+		-webkit-transform: rotate(0deg)
+	}
+
+	to {
+		-webkit-transform: rotate(360deg)
+	}
+}
+
+@-moz-keyframes orbit {
+	from {
+		-moz-transform: rotate(0deg)
+	}
+
+	to {
+		-moz-transform: rotate(360deg)
+	}
+}
+
+@-moz-keyframes moon {
+	from {
+		-moz-transform: rotate(0deg)
+	}
+
+	to {
+		-moz-transform: rotate(360deg)
+	}
+}
+
+
+
+
+
+/*Поиск*/
+.container-1 {
+	width: 240px;
+	vertical-align: middle;
+	white-space: nowrap;
+	position: relative;
+	padding-top: 4%;
+	padding-left: 5px;
+}
+
+.container-1 input#search {
+	width: 200px;
+	height: 60px;
+	background: #9f6b55;
+	border: none;
+	font-size: 16px;
+	float: left;
+	color: #63717f;
+	padding-left: 20px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.container-1 input#search::-webkit-input-placeholder {
+	color: #000;
+}
+
+.container-1 input#search:-moz-placeholder {
+	/* Firefox 18- */
+	color: #000;
+}
+
+.container-1 input#search::-moz-placeholder {
+	/* Firefox 19+ */
+	color: #000;
+}
+
+.container-1 input#search:-ms-input-placeholder {
+	color: #000;
+}
+
+.container-1 input#search:hover,
+.container-1 input#search:focus,
+.container-1 input#search:active {
+	outline: none;
+	background: #ffffff;
+}
+
+.container-1 input#search {
+	font-family: monospace;
+	width: 200px;
+	height: 30px;
+	background: rgb(187, 215, 238);
+	border: none;
+	font-size: 16px;
+	color: #262626;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+
+	-webkit-transition: background .55s ease;
+	-moz-transition: background .55s ease;
+	-ms-transition: background .55s ease;
+	-o-transition: background .55s ease;
+	transition: background .55s ease;
+}
+
+
+.emoji {
+	padding-top: 80px;
+	width: auto;
+	height: 250px;
+}
+
+.reacts {
+	/*background: #3a5897;*/
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100px;
+}
+
+.reacts figure {
+	border-radius: 90px;
+	background-color: rgba(187, 215, 238, 0.322);
+	display: flex;
+	width: 750px;
+	justify-content: center;
+	align-items: center;
+	transition: 1s;
+	margin-top: 100px;
+}
+
+.reacts figure:hover {
+	background: rgb(187, 215, 238);
+	box-shadow: 0 0 20px rgb(112, 119, 143);
+	transition: 1s;
+}
+
+.reaction img {
+	width: 120px;
+	transition: 1s;
+	overflow: hidden;
+}
+
+.reaction img:hover {
+	transform: scale(1.5);
+	cursor: pointer;
+	letter-spacing: 14px;
+	transition: 1s;
+
+}
+
+.photos__like-count {
+	position: absolute;
+	text-align: center;
+	margin-top: 60px;
+	margin-left: 80px;
+	font-family: monospace;
+	box-shadow: 0 0 10px #000;
+	font-size: 14px;
+	z-index: 2;
+	padding: 0px 15px;
+	background-color: #1b1c1d;
+	color: aliceblue;
+	border-radius: 100px;
+}
+
+.emoji p {
+	margin-top: -100px;
+	text-align: center;
+}

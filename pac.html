@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+
+	<link rel="stylesheet" href="css/css.css">
+	<link rel="stylesheet" href="css/space.css">
+
+	<link rel="shortcut icon" href="img/favicon-32x32.ico" sizes="32x32" type="image/x-icon">
+	<link rel="shortcut icon" href="img/favicon-16x16.ico" sizes="16x16" type="image/x-icon">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+	<title>Солнечная система | Факты, информация и изображения о Солнечной системе | Cosmo.space</title>
+
+	<!-- 	<audio id=audio src="audio/space.wav" hidden loop="-1" autoplay></audio>
+onMouseOver="audio.play()" -->
+
+	<script id="chatBroEmbedCode">
+		/* Chatbro Widget Embed Code Start */
+		function ChatbroLoader(chats, async) {
+			async = !1 !== async;
+			var params = {
+					embedChatsParameters: chats instanceof Array ? chats : [chats],
+					lang: navigator.language || navigator.userLanguage,
+					needLoadCode: 'undefined' == typeof Chatbro,
+					embedParamsVersion: localStorage.embedParamsVersion,
+					chatbroScriptVersion: localStorage.chatbroScriptVersion
+				},
+				xhr = new XMLHttpRequest;
+			xhr.withCredentials = !0, xhr.onload = function () {
+				eval(xhr.responseText)
+			}, xhr.onerror = function () {
+				console.error('Chatbro loading error')
+			}, xhr.open('GET', '//www.chatbro.com/embed.js?' + btoa(unescape(encodeURIComponent(JSON.stringify(params)))),
+				async), xhr.send()
+		} /* Chatbro Widget Embed Code End */
+		setTimeout(function () {
+			ChatbroLoader({
+				encodedChatId: '07NcR'
+			});
+		}, 1000);
+	</script>
+
+</head>
+
+
+<!-- 
+
+		setTimeout(function () {
+			ChatbroLoader({
+				encodedChatId: '07NcR'
+			});
+		}, 1000);
+
+ -->
+
+
+<body>
+<div class="particles_bg">
+	<div class="page-bg">
+		<div id="particles-js"></div>
+	</div>
+</div>
+
+	<div class="top-menu">
+		<ul class="blok-menu">
+
+				<ul class="main">
+					<li><a href="index.html">Главная</a></li>
+					<li><a href="pac.html">Солнечная система</a></li>
+
+					<li>
+						<a href="planets.html">Планеты</a>
+						<ul>
+							<li> <a href="mercur.html"> Меркурий <img src="img/icon/mercur.png" alt="" width="60"
+										height="60"></a></li>
+							<li><a href="venera.html">Венера
+									<img src="img/icon/venus.png" alt="" width="60" height="60"></a></li>
+							<li><a href="earth.html">Земля<img src="img/icon/earth.png" alt="" width="60" height="60"></a>
+							</li>
+							<li><a href="mars.html">Марс<img src="img/icon/mars.png" alt="" width="60" height="60"></a>
+							</li>
+							<li><a href="jupiter.html">Юпитер<img src="img/icon/jupiter.png" alt="" width="60" height="60"></a>
+							</li>
+							<li><a href="saturn.html">Сатурн<img src="img/icon/saturn.png" alt="" width="60" height="60"></a>
+							</li>
+							<li><a href="uran.html">Уран<img src="img/icon/uran.png" alt="" width="60" height="60"></a>
+							</li>
+							<li><a href="neptune.html">Нептун<img src="img/icon/neptun.png" alt="" width="60" height="60"></a></li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">Звезды</a>
+						<ul>
+							<li><a href="sun.html">Солнце <img src="img/icon/sun.png" width="60" height="60" alt=""> </a>
+							</li>
+							<li><a href="">Полярная<img src="img/icon/polrnaji.png" width="60" height="60" alt="">
+								</a></li>
+							<li><a href=""></a></li>
+						</ul>
+					</li>
+					<!--<li>
+						<a href="#">Карликовые планеты</a>
+						<ul>
+							<li><a href="#">Плутон <img src="img/icon/pluton.png" width="60" height="60" alt=""> </a>
+							</li>
+							<li><a href="#">Церера <img src="img/icon/ceres.png" width="60" height="60" alt=""> </a></li>
+							<li><a href="#">Хаумеф <img src="img/icon/haumef.png" width="60" height="60" alt=""> </a>
+							</li>
+							<li><a href="#">Макемаке <img src="img/icon/makemake.png" width="60" height="60" alt=""> </a>
+							</li>
+							<li><a href="#">Эрида(Эрис) <img src="img/icon/eris.png" width="60" height="60" alt=""> </a>
+							</li>
+						</ul>
+					</li>-->
+
+					<li><a href="#">Спутники</a></li>
+					<li><a href="#">Разное</a></li>
+
+					<li>
+						<div class="box">
+							<div class="container-1">
+								<input type="search" id="search" placeholder="Поиск..." />
+							</div>
+						</div>
+					</li>
+				</ul>
+		
+		</ul>
+	</div>
+	<div class="ytWidget">
+		<div id="ytWidget"> </div>
+		<script src="https://translate.yandex.net/website-widget/v1/widget.js?widgetId=ytWidget&pageLang=ru&widgetTheme=light&autoMode=false"></script>
+	</div>
+
+
+
+	<!-- Модальное Окно  -->
+
+	<div class="popup-fade" >
+		<div class="popup  js-tilt"  id="home-popup"
+			style="will-change: transform;   -webkit-transform: perspective(1000px) translate3d(0px, 0px, 0px) rotate3d(1, 1, 1, 0deg); transform: perspective(1000px) translate3d(0px, 0px, 0px) rotate3d(1, 1, 1, 0deg); ">
+			<a class="popup-close" id="close"></a>
+				<h4 style="text-align: center;">Приветствую тебя посетитель сайта !!!</h4>
+			<p>
+				<img src="img/icon/mod.gif" width="300" height="300" alt="">
+				Ты найдешь на этом сайте многое интересное, а именно:</p>
+			<ul>
+				<li> Интересное о планетах</li>
+				<li> Их факты </li>
+				<li> И многое другое</li>
+			</ul>
+			<p> А также можешь прочитать информацию на сайте на любом языке</p>
+			<p style="margin-top:-40px">
+				<i style="float: right; font-size:14px;">"Если сможешь найти игру то это тебя удивит"</i>
+			</p>
+		</div>
+	</div>
+	<script src="/js/cookie.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script>
+		var poppy = localStorage.getItem('popup-fade');
+
+		if(!poppy){
+			function PopUp(){
+				$('#home-popup').fadeIn(500);
+			}
+
+			setTimeout(function(){
+				PopUp();
+			},1000); // 1000 to load it after 1 second from page load
+
+			$('#close').click(function() {
+				$('.popup').fadeOut(300);
+			});
+			localStorage.setItem('popup-fade','true');
+		}
+	</script>
+
+<!---------------------------------------------------->
+
+	<div class="item1">
+		<p class="solntse"><span id="typed"></span></p>
+		<a href="solar_system.html"><button class="model3d">посмотреть 3d модель Солнечной системы</button></a>
+	</div>
+
+
+
+	<a href="#" class="scrollup">Наверх</a>
+
+	<div class="content">
+		<!--<div id="chatbro"></div>-->
+		<p class="text">
+			Солнечная система место в космическом пространстве, в котором располагается солнце планеты по порядку и
+			множество других космических объектов и небесных тел.
+		</p>
+		<br>
+		<section class="clearfix">
+			<ul class="solarsystem">
+				<li class="sun">
+					<a href="sun.html">
+						<span>Солнце</span>
+					</a>
+				</li>
+				<li class="mercury">
+					<a href="mercur.html">
+						<span>Меркурий</span>
+					</a>
+				</li>
+				<li class="venus">
+					<a href="venera.html">
+						<span>Венера</span>
+					</a>
+				</li>
+				<li class="earth">
+					<a href="earth.html">
+						<span>
+							Земля
+							<span class="moon">и Луна</span>
+						</span>
+					</a>
+				</li>
+				<li class="mars">
+					<a href="mars.html">
+						<span>Марс</span>
+					</a>
+				</li>
+				<li class="asteroids_meteorids">
+					<span>Пояс астериодов</span>
+				</li>
+				<li class="jupiter">
+					<a href="jupiter.html">
+						<span>Юпитер</span>
+					</a>
+				</li>
+				<li class="saturn">
+					<a href="saturn.html">
+						<span>
+							Сатурн и его
+							<span class="ring">кольца</span>
+						</span>
+					</a>
+				</li>
+				<li class="uranus">
+					<a href="uran.html">
+						<span>Уран</span>
+					</a>
+				</li>
+				<li class="neptune">
+					<a href="neptun.html">
+						<span>Нептун</span>
+					</a>
+				</li>
+				<li class="pluto">
+					<a href="#pluto">
+						<span>Плутон</span>
+					</a>
+				</li>
+			</ul>
+
+			<ul id="descriptions" class="solsys">
+				<li>
+					<a href="sun.html">
+						<h2 id="sun" class="solarsys">Солнце</h2>
+						<p>
+							Солнце является звездой, которая представляет собой горячий шар из раскаленных газов в
+							центре
+							нашей Солнечной системы. Его влияние простирается далеко за пределы орбит Нептуна и
+							Плутона.
+							<span>
+								Без Солнца и его интенсивной энергии и тепла, не было бы жизни на Земле.
+							</span>
+							Существуют миллиарды звезд, как наше Солнце, разбросанных по галактике Млечный Путь.
+						</p>
+					</a>
+				</li>
+
+
+				<li>
+					<a href="mercur.html">
+						<h2 id="mercury" class="solarsys">Меркурий</h2>
+						<p>
+							Выжженный Солнцем Меркурий лишь немного больше, чем спутник Земли Луна. Подобно Луне,
+							Меркурий
+							практически лишен атмосферы и не может сгладить следы воздействия от падения метеоритов,
+							поэтому
+							он как и Луна покрыт кратерами.
+							<span>
+								Дневная сторона Меркурия очень сильно нагревается на Солнце, а на ночной стороне
+								температура
+								падает на сотни градусов ниже нуля.
+							</span>
+							В кратерах Меркурия, которые расположены на полюсах, существует лед. Меркурий совершает
+							один
+							оборот вокруг Солнца за 88 дней.
+						</p>
+					</a>
+				</li>
+
+				<li>
+					<a href="venera.html">
+						<h2 id="venus" class="solarsys">Венера</h2>
+						<p>
+							Венера это мир чудовищной жары (еще больше чем на Меркурии) и вулканической активности.
+							<span>
+								Аналогичная по структуре и размеру Земле, Венера покрыта толстой и токсичной
+								атмосферой,
+							</span>
+							которая создает сильный парниковый эффект. Этот выжженной мир достаточно горячий, чтобы
+							расплавить свинец. Радарные снимки сквозь могучую атмосферу выявили вулканы и
+							деформированные
+							горы. Венера вращается в противоположном направлении, от вращения большинства планет.
+						</p>
+					</a>
+				</li>
+
+				<li>
+					<a href="earth.html">
+						<h2 id="earth" class="solarsys">Земля</h2>
+						<p>
+							<span>
+								Земля — планета океан. Наш дом, с его обилием воды и жизни делает его уникальным в
+								нашей
+								Солнечной системе.
+							</span>
+							Другие планеты, в том числе несколько лун, также имеют залежи льда, атмосферу, времена
+							года и
+							даже погоду, но только на Земле все эти компоненты собрались вместе таким образом, что
+							стало
+							возможным существование жизнь.
+						</p>
+					</a>
+				</li>
+
+				<li>
+					<a href="mars.html">
+						<h2 id="mars" class="solarsys">Марс</h2>
+						<p>
+							<span>
+								В течение многих десятилетий, люди полагали, что яркие и темные области на Марсе это
+								пятна
+								растительности и что Марс может быть подходящим местом для жизни, и что вода существует
+								в
+								полярных шапках.
+							</span>
+							Когда космический аппарат Маринер-4, прилетел у Марсу в 1965 году, многие из ученых были
+							потрясены, увидев фотографии мрачной планеты покрытой кратерами. Марс оказался мертвой
+							планетой.
+						</p>
+					</a>
+				</li>
+
+
+				<li>
+					<a href="jupiter.html">
+						<h2 id="jupiter" class="solarsys">Юпитер</h2>
+						<p>
+							<span>Юпитер — самая массивная планета в нашей Солнечной системе</span>
+							, имеет четыре больших спутника и множество небольших лун. Юпитер образует своего рода
+							миниатюрную Солнечную систему. Чтобы превратится в полноценную звезду, Юпитеру нужно было
+							стать
+							в 80 раз массивнее.
+						</p>
+					</a>
+				</li>
+
+
+				<li>
+					<a href="saturn.html">
+						<h2 id="saturn" class="solarsys">Сатурн</h2>
+						<p>
+							Сатурн — самая дальняя из пяти планет, которые были известны до изобретения телескопа.
+							Подобно
+							Юпитеру, Сатурн состоит в основном из водорода и гелия.
+							<span>Его объем в 755 раз больше</span>
+							, чем у Земли. Ветры в его атмосфере достигают скорости 500 метров в секунду. Эти быстрые
+							ветра
+							в сочетании с теплом, поднимающимся из недр планеты, вызывают появление желтых и
+							золотистых
+							полос, которые мы видим в атмосфере.
+						</p>
+					</a>
+				</li>
+
+
+				<li>
+					<a href="uran.html">
+						<h2 id="uranus" class="solarsys">Уран</h2>
+						<p>
+							Первая планета найденная с помощью телескопа,
+							<span>Уран был открыт в 1781 году астрономом Уильямом Гершелем.</span>
+							Седьмая планета от Солнца настолько далека, что один оборот вокруг Солнца занимает 84
+							года.
+						</p>
+					</a>
+				</li>
+
+
+				<li>
+					<a href="neptune.html">
+						<h2 id="neptune" class="solarsys">Нептун</h2>
+						<p>
+							Почти в 4,5 млрд. километрах от Солнца вращается далекий Нептун.
+							<span>На один оборот вокруг Солнца у него уходит 165 лет.</span>
+							Он невидим невооруженным глазом из-за его огромного расстояния от Земли. Интересно, что
+							его
+							необычная эллиптическая орбита, пересекается с орбитой карликовой планеты Плутона из-за
+							чего
+							Плутон находится внутри орбиты Нептуна порядка 20 лет из 248 за которые совершает один
+							оборот
+							вокруг Солнца.
+						</p>
+					</a>
+				</li>
+
+
+				<li>
+					<a href="pluton.html">
+						<h2 id="pluto" class="solarsys">Плутон</h2>
+						<p>
+							<span>
+								Крошечный, холодный и невероятно далекий Плутон был открыт в 1930 году и долго считался
+								девятой планетой.
+							</span>
+							Но после открытий подобных Плутону миров, которые находились еще дальше, Плутон был
+							переведен
+							в
+							категорию карликовых планет в 2006 году.
+						</p>
+					</a>
+				</li>
+
+			</ul>
+
+		</section>
+
+		<p class="text">
+			Солнечная система – часть галактики Млечный Путь, строение которого напоминает диск диаметром 100000-120000
+			световых лет и толщиной 1000 световых лет. Здесь расположено порядка 400 млрд. звезд. Солнечная система
+			возникла предположительно 13 млрд. лет назад, и в процессе эволюции приобрела структуру, свойственную только
+			ей, не повторяющуюся на просторах Вселенной.
+		</p>
+
+		<p class="text">
+			Она расположилась во внутреннем рукаве созвездия Ориона. Система вместе с входящими в нее космическими телами,
+			вращается вокруг ядра Галактики со скоростью 250 км/сек. На полный оборот уходит 1 галактический год
+			длительностью 225 млн. лет.
+		</p>
+			<p class="text">
+				Космические тела связаны между собой законом всемирного тяготения. Кроме того, в межпланетном пространстве
+				отсутствует трение. Благодаря этим 2-м факторам движение объектов стабильно и строение не нарушается.
+			</p>
+		
+
+		<div class="item1">Возникновение</div>
+		<p class="text"> История формирования Солнечной системы кратко:</p>
+	
+			<ul class="lishka text">
+				<li style="list-style: decimal">На месте желтой звезды и соседних небесных тел миллиарды лет назад
+					образовалось облако из пыли и газов. Его
+					предполагаемые размеры 6 млрд. км по одному из параметров – длине или ширине.</li>
+				<li style="list-style: decimal">В центре облака произошел «гравитационный коллапс», вследствие которого
+					сформировались плотные сгустки
+					материи.</li>
+				<li style="list-style: decimal">Со временем они преобразовались в Солнце.</li>
+				<li style="list-style: decimal">Из оставшегося материала вокруг звезды сформировался протопланетный диск.
+					Планеты возникли из его
+					компонентов.</li>
+			</ul>
+	
+
+		<div class="image">
+			<div class="ims">
+
+				<img width=" 80%" src="img/sun/solar.jpg" alt="">
+				<figure>
+					<figcaption>
+						<h6>
+							Гpaфичecкoe пpeдcтaвлeниe cтроение cолнечной системы
+						</h6>
+					</figcaption>
+				</figure>
+			</div>
+		</div>
+
+
+
+
+		<div class="item1">Строение Солнечной системы</div>
+
+		<p class="text">Строение и состав Солнечной системы выглядит так:</p>
+		<ul class="lishka">
+			<li style="	list-style-type: upper-alpha">Центральное место занимает Солнце. Оно состоит из водорода и
+				гелия.Температура поверхности превышает отметку, 6000°С.</li>
+			<li style=" list-style-type: upper-alpha">99,86% массы системы приходится на светило.</li>
+			<li style="	list-style-type: upper-alpha">Солнце относится к разряду желтых карликовых звёзд по
+				принятой учеными звездной классификации.
+			</li>
+			<li style="	list-style-type: upper-alpha">Вокруг звезды вращаются 8 открытых планет, которые делятся на 2
+				группы:
+				планеты земного типа и газовые гиганты.
+			</li>
+		</ul>
+
+
+		<div class="image">
+			<div class="ims">
+				<img width="80%" src="img/sun/stroenie.jpg" alt="">
+				<figure>
+					<figcaption>
+						<h6>
+							Гpaфичecкoe пpeдcтaвлeниe cтроение cолнечной системы
+						</h6>
+					</figcaption>
+				</figure>
+			</div>
+		</div>
+	</div>
+
+
+
+	<!--курсор-->
+	<script src="js/cursor.js"></script>
+	<div id="circles">
+		<div id="circle1"></div>
+	</div>
+
+	<footer>
+		<div class="block">
+			<!-- <a href="" class="footer-logo">
+					<br>Интересное о космос</a>
+				-->
+			<ul class="m3nu">
+				<li class=" active">
+					<a href="index.html">Главная</a>
+				</li>
+				<li class="">
+					<a href="#about">Созвездие</a>
+				</li>
+				<li class="">
+					<a href="pac.html">Солнечная система</a>
+				</li>
+				<li class="">
+					<a href="#contact">Звезды</a>
+				</li>
+				<li class="">
+					<a href="#contact">Планеты</a>
+				</li>
+				<li class="">
+					<a href="#contact">Карликовые планеты</a>
+				</li>
+				<li class="">
+					<a href="#contact">Спутники</a>
+				</li>
+				<!--<script type="text/javascript" src="//hi.kickassapp.com/kickass.js"></script>-->
+				<p class="kick">
+					<a class="kickass" href="javascript:var KICKASS_SITE_KEY='test';var el = document.createElement('script'); 
+				el.src = '/js/kickass.js';document.body.appendChild(el);void(0);">
+						Нажми чтобы сыграть
+					</a>
+				</p>
+<!--<div class="KICKASSELEMENT KICKASShidden " id="kickass-menu" style="bottom: -250px; display: block;"><div id="kickass-howto-image" class="KICKASSELEMENT kickass-howto-invisible"></div><div id="kickass-pointstab" class="KICKASSELEMENT"><iframe style="background: transparent" src="https://kickassapp.com/hello.html" class="KICKASSELEMENT" id="kickass-hello-sunshine"></iframe><div id="kickass-bomb-menu" class="KICKASSELEMENT KICKASShidden" style=""><ul id="kickass-bomb-list" class="KICKASSELEMENT"></ul></div><div id="kickass-weapons-menu" class="KICKASSELEMENT KICKASShidden" style="display:none"><ul id="kickass-weapons-list" class="KICKASSELEMENT"><li class="KICKASSELEMENT kickass-weapon-item" style="background-image: url(&quot;https://kickassapp.com/css/gfx/kickass/weap-cannon.png&quot;);"><span class="KICKASSELEMENT">Cannon</span></li><li class="KICKASSELEMENT kickass-weapon-item" style="background-image: url(&quot;https://kickassapp.com/css/gfx/kickass/weap-laser.png&quot;);"><span class="KICKASSELEMENT">Laser</span></li></ul></div><div id="kickass-pointstab-wrapper" class="KICKASSELEMENT"><div id="kickass-points" class="KICKASSELEMENT">0</div><div id="kickass-esctoquit" class="KICKASSELEMENT">Press esc to quit</div><iframe class="KICKASSELEMENT kickass-like" src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fkickassapp&amp;send=false&amp;layout=button_count&amp;width=47&amp;show_faces=false&amp;action=like&amp;colorscheme=dark&amp;font=arial&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:80px; height:21px;" allowtransparency="true"></iframe></div><ul id="kickass-pointstab-menu" class="KICKASSELEMENT"><li class="KICKASSELEMENT"><a class="KICKASSELEMENT" id="kickass-link-highscores" href="#">Submit score</a></li><li class="KICKASSELEMENT"><a class="KICKASSELEMENT" id="kickass-link-menu" href="#">Menu</a></li><li class="last-li KICKASSELEMENT"><a class="KICKASSELEMENT" id="kickass-link-ships" href="#">Switch ship</a></li></ul></div><div class="KICKASSELEMENT" id="kickass-profile-menu"><iframe class="KICKASSELEMENT" width="100%" height="300px" src="https://kickassapp.com/intermediate_postmessage.html?url=https%3A%2F%2Fkickassapp.com%2F&amp;origin=https%3A%2F%2Fkickassapp.com%2F&amp;preship=&amp;is_campaign=&amp;is_mysite="></iframe></div></div>-->
+
+
+			</ul>
+			<div class="social">
+				<a href="#" class="fa fa-google"></a>
+				<a href="#" class="fa fa-youtube"></a>
+				<a href="#" class="fa fa-linkedin"></a>
+				<a href="#" class="fa fa-vk"></a>
+				<a href="#" class="fa fa-instagram"></a>
+			</div>
+
+			<p class="copyright-text"><a href="mailto:nikolainedelko777@mail.com">Cosmo&copy;gmail.com </a>| Все
+				интересное о
+				космосе</p>
+		</div>
+	</footer>
+
+
+	<!--HelloPreload http://hello-site.ru/preloader/
+	<div id="hellopreloader">
+		<div id="hellopreloader_preload"></div>
+	</div>-->
+
+
+
+<!--
+	<script >
+		var hellopreloader = document.getElementById("hellopreloader_preload");
+
+		function fadeOutnojquery(el) {
+			el.style.opacity = 1;
+			var interhellopreloader = setInterval(function () {
+				el.style.opacity = el.style.opacity - 0.05;
+				if (el.style.opacity <= 0.05) {
+					clearInterval(interhellopreloader);
+					hellopreloader.style.display = "none";
+				}
+			}, 16);
+		}
+		window.onload = function () {
+			setTimeout(function () {
+				fadeOutnojquery(hellopreloader);
+			}, 1000);
+		};
+	</script>-->
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<!--<script src="js/scroll.js"></script>-->
+
+
+
+
+	<script >
+		$(document).ready(function ($) {
+			$('.popup-open').click(function () {
+				$('.popup-fade').fadeIn();
+				return false;
+			});
+
+			$('.popup-close').click(function () {
+				$(this).parents('.popup-fade').fadeOut();
+				return false;
+			});
+
+			$(document).keydown(function (e) {
+				if (e.keyCode === 27) {
+					e.stopPropagation();
+					$('.popup-fade').fadeOut();
+				}
+			});
+
+			//$('.popup-fade').click(function (e) {
+			//	if ($(e.target).closest('.popup').length == 0) {
+			//		$(this).fadeOut();
+			//	}
+			//});
+		});
+	</script>
+
+
+
+
+
+<script src="/js/particles/particles.js"></script>
+<script src="/js/particles/app.js"></script>
+
+<script src="http://gijsroge.github.io/tilt.js/js/jquery.slim.min.js"></script>
+<script src="http://gijsroge.github.io/tilt.js/js/prism.js"></script>
+<script src="js/tilt.jquery.js"></script>
+<script>
+	const tilt = $('.js-tilt').tilt();
+	// Уничтожить экземпляр
+	tilt.tilt.destroy.call(tilt);
+	// Получить значения экземпляра
+	tilt.tilt.getValues.call(tilt); // возвращается [{},{},etc..]
+	// Сбросить экземпляр
+	tilt.tilt.reset.call(tilt);
+	$('.js-tilt').tilt({
+		glare: false, // Включает эффект бликов
+		maxGlare: 0 // От 0 до 1.
+	})
+</script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+<script>
+	var typed = new Typed('#typed', {
+		// Ожидает 1000 мс после ввода «Первый»
+		strings: [" ", "Солнечная система", "The solar system"],
+		backSpeed: 80,
+		typeSpeed: 140,
+		loop: true,
+	});
+</script>
+
+</body>
+
+</html>

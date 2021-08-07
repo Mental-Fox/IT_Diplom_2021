@@ -1,0 +1,116 @@
+/* Config */
+/* mixins */
+/* Styles */
+body {
+	background: #090a0f;
+}
+
+.page-bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.particles_bg {
+	position: fixed;
+}
+
+#particles-js {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: -2;
+	background-size: cover;
+	background-image: url("");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#myCanvas {
+	height: 70vh;
+	width: 74vw;
+	margin-top: -50px;
+}
+
+canvas {
+	cursor: all-scroll;
+	z-index: 1000;
+	height: 100vh;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	outline: none;
+	-webkit-tap-highlight-color: rgba(0, 204, 255, 0);
+}
+
+body.particle_canvas #particles-js canvas {
+	opacity: 0;
+	-webkit-transform: scale(0.7);
+	-ms-transform: scale(0.7);
+	transform: scale(0.7)
+}
+
+
+@media only screen and (min-width: 621px) {
+	body.particle_canvas #particles-js canvas {
+		-webkit-transform: scale(0.8);
+		-ms-transform: scale(0.8);
+		transform: scale(0.8);
+		opacity: .5
+	}
+}
+
+
+
+
+/*выделение текста*/
+::selection {
+	background: #7b8fa05b;
+}
+
+::-moz-selection {
+	background: #ccc;
+	color: #fff;
+}
+
+::-webkit-selection {
+	background: #ccc;
+	color: #fff;
+}
+
+/*Вертикальный скролл*/
+::-webkit-scrollbar-button {
+	background-image: url('');
+	background-repeat: no-repeat;
+	width: 6px;
+	height: 0px
+}
+
+::-webkit-scrollbar-track {
+	background-color: #1d1d1d34;
+	box-shadow: 0px 0px 3px #000 inset;
+}
+
+::-webkit-scrollbar-thumb {
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	background-color: #bbd7ee;
+	/* #87a3de */
+	box-shadow: 0px 1px 1px #fff inset;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+::-webkit-resizer {
+	background-image: url('');
+	background-repeat: no-repeat;
+	width: 8px;
+	height: 0px
+}
+
+::-webkit-scrollbar {
+	width: 12px;
+}

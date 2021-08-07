@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="apple-touch-icon" href="/img/apple-touch-icon.png" sizes="180x180">
+	<link rel="shortcut icon" href="img/favicon-32x32.ico" sizes="32x32" type="image/x-icon">
+	<link rel="shortcut icon" href="img/favicon-16x16.ico" sizes="16x16" type="image/x-icon">
+
+	<link rel="stylesheet" href="css/space.css">
+	<link rel="stylesheet" href="css/css.css">
+
+	<script src="js/three.js"></script>
+	<!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r83/three.js">	</script>
+-->
+	<script src="js/planets/mars.js"></script>
+	<title>♆ | Нептун: о далеком и неизведанном гиганте космоса | ♆</title>
+</head>
+
+
+<body>
+	<div class="page-bg">
+		<div id="particles-js"></div>
+	</div>
+
+	<div id="page-wrap">
+
+		<div class="top-menu">
+			<ul class="blok-menu">
+				<nav>
+					<ul class="main">
+						<li><a href="index.html">Главная</a></li>
+						<li><a href="pac.html">Солнечная система</a></li>
+						<li>
+							<a href="#">Звезды</a>
+							<ul>
+								<li><a href="sun.html">Солнце <img src="img/icon/sun.png" width="60" height="60" alt=""> </a>
+								</li>
+								<li><a href="">Полярная<img src="img/icon/polrnaji.png" width="60" height="60" alt="">
+									</a></li>
+								<li><a href=""></a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="planets.html">Планеты</a>
+							<ul>
+								<li> <a href="mercur.html"> Меркурий <img src="img/icon/mercur.png" alt="" width="60"
+											height="60"></a></li>
+								<li><a href="venera.html">Венера
+										<img src="img/icon/venus.png" alt="" width="60" height="60"></a></li>
+								<li><a href="earth.html">Земля<img src="img/icon/earth.png" alt="" width="60" height="60"></a>
+								</li>
+								<li><a href="mars.html">Марс<img src="img/icon/mars.png" alt="" width="60" height="60"></a></li>
+								<li><a href="jupiter.html">Юпитер<img src="img/icon/jupiter.png" alt="" width="60"
+											height="60"></a></li>
+								<li><a href="saturn.html">Сатурн<img src="img/icon/saturn.png" alt="" width="60"
+											height="60"></a></li>
+								<li><a href="uran.html">Уран<img src="img/icon/uran.png" alt="" width="60" height="60"></a></li>
+								<li><a href="neptune.html">Нептун<img src="img/icon/neptun.png" alt="" width="60"
+											height="60"></a></li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="#">Карликовые планеты</a>
+							<ul>
+								<li><a href="#">Плутон <img src="img/icon/pluton.png" width="60" height="60" alt=""> </a></li>
+								<li><a href="#">Церера <img src="img/icon/ceres.png" width="60" height="60" alt=""> </a></li>
+								<li><a href="#">Хаумеф <img src="img/icon/haumef.png" width="60" height="60" alt=""> </a></li>
+								<li><a href="#">Макемаке <img src="img/icon/makemake.png" width="60" height="60" alt=""> </a>
+								</li>
+								<li><a href="#">Эрида(Эрис) <img src="img/icon/eris.png" width="60" height="60" alt=""> </a>
+								</li>
+							</ul>
+						</li>
+
+						<li><a href="#">Спутники</a></li>
+						<li><a href="#">Разное</a></li>
+
+						<li>
+							<div class="box">
+								<div class="container-1">
+									<input type="search" id="search" placeholder="Поиск..." />
+								</div>
+							</div>
+						</li>
+					</ul>
+				</nav>
+			</ul>
+		</div>
+
+
+		<div class="ytWidget">
+			<div id="ytWidget"> </div>
+			<script
+				src="https://translate.yandex.net/website-widget/v1/widget.js?widgetId=ytWidget&pageLang=ru&widgetTheme=light&autoMode=false"
+				type="text/javascript"></script>
+		</div>
+
+		<!--<audio id=audio src="audio/space.mid" hidden loop="-1" autoplay></audio>-->
+		<div class="logo">
+
+			<canvas id="myCanvas"></canvas>
+			<script src="js/three.js"></script>
+			<script src="js/OrbitControls.js"></script>
+
+			<script id="vertexShader" type="x-shader/x-vertex">
+				varying vec3 vNormal;
+				void main() 
+				{
+					 vNormal = normalize( normalMatrix * normal );
+					 gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
+				}
+				</script>
+
+			<!-- fragment shader a.k.a. pixel shader -->
+			<script id="fragmentShader" type="x-shader/x-vertex">
+				varying vec3 vNormal;
+				void main() 
+				{
+					float intensity = pow( 0.7 - dot( vNormal, vec3( 0.0, 0.0, .55 ) ), 5.0 ); 
+					 gl_FragColor = vec4( 0, 1.0, 3.0, 0.9 ) * intensity;
+				}
+				</script>
+			<script src="js/planets/neptune.js"></script>
+			<!-- ------------------------------------------------ -->
+			<div class="anim-show">
+				<div class="block-har">
+					<h4>НЕПТУН - восьмая планета от Солнца</h4>
+					<hr>
+					<span id="typed"></span>
+					<ul class="har" id="typed-strings">
+						<li>Диаметр: 50538км <br>
+							Температура поверхности: средняя -220 °С <br>
+							Растояние от Солнца: 4,5 млрд. км<br>
+							Спутники: Тритон, Нереида - и еще 11
+						</li>
+					</ul>
+					<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+					<script>
+						var typed = new Typed('#typed', {
+							stringsElement: '#typed-strings',
+							typeSpeed: 80,
+						});
+					</script>
+				</div>
+					<!-- ------------------------------------------------ -->
+				<div class="block-qart">
+					<a href=""><button class="modelbutt3d">посмотреть 3d рельеф </button></a>
+				</div>
+			</div>
+		
+
+	
+
+		</div>
+	</div>
+
+
+
+	<div class="content" onFocus="audio.play()">
+		<a href="#" class="scrollup">Наверх</a>
+		<div class="meny">
+			<a href="#fakt">1. Факты о Нептуне</a>
+			<a href="#massa">2. Cocтaв и пoвepxнocть плaнeты Нептуне</a>
+			<a href="#sostav">3. Cпутники Нептуне</a>
+			<a href="#history">4. Строение Нептуне</a>
+			<a href="#ideal">5. Кольца Нептуна</a>
+
+
+		</div>
+
+		<div id="vv">
+			<div class="item1">Нептун — «морской» космический бог</div>
+			<p class="text">
+				Восьмая от Солнца планета, которая замыкает группу газовых гигантов. Ее открыли относительно поздно — в 19
+				веке. Ученые заметили нехарактерное для звезд и комет вращение, установили, что это планетарное тело на
+				солнечной орбите. Благодаря яркому синему оттенку космический объект нарекли в честь царя морей — бога
+				древнеримской мифологии Нептуна.
+			</p>
+			<p class="text">
+				Рассмотреть планету невооруженным взглядом невозможно, однако мощное оборудование позволит в полной мере
+				насладиться видами Нептуна на звездном небе.
+			</p>
+		</div>
+
+		<div id="fakt">
+			<div class="item1">12 познавательных фактов о Нептуне</div>
+
+			<div class="image">
+				<figure>
+					<div class="ims">
+						<img src="img/neptun/ring.jpg" alt="">
+						<figcaption>
+							<h6>Интepecные фaкты o плaнeтe Нептуне</h6>
+						</figcaption>
+					</div>
+				</figure>
+			</div>
+		</div>
+
+		<div class="cards-list">
+			<div class="card 1">
+				<div class="card_title title-white">
+					<p>
+						<br>
+						<br>
+						Имеет каменно-ледяное ядро размером с нашу Землю.
+					</p>
+				</div>
+			</div>
+
+			<div class="card 1">
+				<div class="card_title title-white">
+					<p>
+						Атмосфера Нептуна — переходное состояние из жидкого океана в замороженную мантию. Составляющие: вода,
+						аммиак и метан.
+					</p>
+				</div>
+			</div>
+
+			<div class="card 1">
+				<div class="card_title title-white">
+					<p>
+						<br>
+						В некоторых местах пересекаются орбиты Плутона и Нептуна.
+					</p>
+				</div>
+			</div>
+
+			<div class="card 1">
+				<div class="card_title title-white">
+					<p>
+						На планете происходят гигантские вихри, из-за которых на поверхности небесного тела видны пятна.
+					</p>
+				</div>
+			</div>
+
+			<div class="card 1">
+				<div class="card_title title-white">
+					<p>
+						<br>
+						<br>
+						Нептун в 4 раза больше и в 17 раз тяжелее Земли.
+					</p>
+				</div>
+			</div>
+
+			<div class="card 1">
+				<div class="card_title title-white">
+					<p>
+						<br>
+						Самая далекая от Солнца планета (расстояние в 30 раз превышает путь от Земли до Солнца).
+					</p>
+				</div>
+			</div>
+
+			<div class="card 1">
+				<div class="card_title title-white">
+					<p>
+						<br>
+						<br>
+						У Нептуна 13 спутников.
+					</p>
+				</div>
+			</div>
+
+			<div class="card 1">
+				<div class="card_title title-white">
+					<p>
+						<br>
+						<br>
+						Скорость вращения в 2 раза выше, чем у Земли.
+					</p>
+				</div>
+			</div>
+
+			<div class="card 1">
+				<div class="card_title title-white">
+					<p>
+						<br>
+						Красивый синий оттенок планете придает именно метан.
+					</p>
+				</div>
+			</div>
+
+			<div class="card 1">
+				<div class="card_title title-white">
+					<p>
+						<br>
+						Тепловое излучение внутри планеты в 2 раза сильнее внешних солнечных лучей.
+					</p>
+				</div>
+			</div>
+
+			<div class="card 1">
+				<div class="card_title title-white">
+					<p>
+						<br>
+						<br>
+						Сутки длятся 16 земных часов.
+					</p>
+				</div>
+			</div>
+
+			<div class="card 1">
+				<div class="card_title title-white">
+					<p>
+						<br>
+						<br>
+						Путь до Нептуна займет около 14 лет.
+					</p>
+				</div>
+			</div>
+		</div>
+
+
+
+		<br>
+		<div id="massa">
+			<div class="item1">Cocтaв и пoвepxнocть плaнeты Нептун</div>
+
+			<p class="text">
+				Как уже было сказано выше он в 17 раз больше нашей Земли. Ниже на картинке показательно сравнение размеров
+				наших планет.
+			</p>
+
+
+			<div class="image">
+				<figure>
+					<div class="ims">
+						<img src="img/neptun/Sravnenie-Neptuna-i-Zemli.jpg" alt="">
+						<figcaption>
+							<h6>
+								Сравнительные размеры Нептуна и Земли
+							</h6>
+						</figcaption>
+					</div>
+				</figure>
+			</div>
+
+			<p class="text">
+				Поверхность Нептуна состоит из аммиачного и метанового льда, а вот ядро планеты вполне может оказаться
+				каменным, но это пока всего лишь гипотеза. Любопытно, что сила гравитации на Нептуне весьма схожа с земной,
+				она всего лишь на 17% больше, чем у нас, и это притом, что Нептун в 17 раз больше Земли. Несмотря на это
+				погулять по Нептуну мы вряд ли сможет в ближайшее время, смотрите предыдущий абзац про ледышку. И к тому же
+				на поверхности Нептуна дуют сильнейшие ветры, скорость которых может достигать до 2400 километров в час (!),
+				пожалуй, ни на одной другой планете нашей солнечной системе нет настолько сильных ветров, как здесь.
+			</p>
+
+		</div>
+		<div id="sostav">
+			<div class="item1">Спутники и кольца </div>
+			<p class="text">
+				Наверняка когда вы слышите про кольца планет, на ум сразу же приходит Сатурн, но на самом деле он далеко не
+				единственные обладатель колец. Кольца, пусть и не такие большие и красивые, как у Сатурна, имеет и наш
+				Нептун. В целом у Нептуна есть пять колец, названых на честь астрономов, открывших их: Галле, Леверье,
+				Ласселл, Араго и Адамс.
+
+				Кольца Нептуна состоят из маленьких камушков и космической пыли (множество частиц микронного
+				размера), по строению они в чем-то подобны кольцам Юпитера и их трудно довольно таки заметить, так как они
+				черного цвета. Ученые считают, что кольца Нептуна относительно молодые, по крайней мере, они намного моложе
+				колец соседнего с ним Урана.
+			</p>
+			<p class="text">
+				У Нептуна, как и у всякой порядочной планеты-гиганта есть свои спутники и не один, а целых тринадцать,
+				названых на честь более мелких морских богов античного пантеона.
+			</p>
+
+			<div class="image">
+				<figure>
+					<div class="ims">
+						<img width="150" height="150" src="img/neptun/sputniki-neptuna-1.jpg" alt="">
+						<figcaption>
+							<h6>
+								Спутники и кольца
+							</h6>
+						</figcaption>
+					</div>
+				</figure>
+			</div>
+		</div>
+
+		<div id="history">
+			<div class="item1">Строение Нептун</div>
+
+			<p class="text">
+				Нептун – это ледяной гигант нашей Солнечной системы. Мы можем увидеть только небольшую часть атмосферы –
+				10-15% от общей массы планеты и простирающейся на 20% к собственному ядру.
+			</p>
+
+			<div class="image">
+				<figure>
+					<div class="ims">
+						<img src="img/neptun/stroenie.png" alt="">
+						<figcaption>
+							<h6>
+								Строение Нептун
+							</h6>
+						</figcaption>
+					</div>
+				</figure>
+			</div>
+			<p class="text">
+				Центр планеты, состав Нептуна, найдено большое количество:
+			</p>
+			<ul class="lishka">
+				<li style="list-style: circle inside">никеля</li>
+				<li style="list-style: circle inside">железа</li>
+				<li style="list-style: circle inside">силикатов</li>
+			</ul>
+			<p class="text">
+				Давление в центральной части может составлять 7 мегабар, которое в два раза превышает давление нашей планеты
+				и может нагреться до 5400 К. Давайте заглянем вглубь планеты и там, на расстоянии приблизительно в 7 000 км
+				метан начинает превращаться в алмазные кристаллы и опускаться медленно вниз в виде больших гранул, похожих
+				на те, что падают у нас во время града.
+			</p>
+		</div>
+
+
+		<div id="ideal">
+			<div class="item1">Кольца Нептуна</div>
+			<p class="text">
+				Кольцевая система планеты оставалась не обнаруженной более 120 лет с момента ее открытия. В 1968 году было
+				выдвинуто предположение о наличии у колец Нептуна, что сумел подтвердить межпланетный зонд Вояджер-2 в 1989
+				году.
+
+
+			</p>
+
+			<div class="image">
+				<figure>
+					<div class="ims">
+						<img width="150" height="150" src="img/neptun/ring.jpg" alt="">
+						<figcaption>
+							<h6>
+								5 Колец Нептуна
+							</h6>
+						</figcaption>
+					</div>
+				</figure>
+			</div>
+
+			<p class="text">
+				Всего восьмая планета имеет 5 колец. Самым близким к ее поверхности является кольцо Галле, расположенное на
+				расстоянии 42 тыс. км. Далее последовательно идут кольца Леверье, Ласселла и Араго. Последнее кольцо
+				Нептуна, названное в честь британского математика Адамса, удалено от планеты на 63 тыс. км. Оно имеет пять
+				дуг, называющихся Храбрость, Свобода, Равенство 1, Равенство 2 и Братство.
+
+				Состоят кольца Нептуна из водяного льда и кремниевых солей. Предположительно, в их состав также входят
+				органические вещества, предающие кольцевой системе красный оттенок.
+			</p>
+		</div>
+
+
+		<div class="video">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/h-F36sUDoWM" frameborder="0"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+				allowfullscreen></iframe>
+		</div>
+	</div>
+
+
+	<div class="page-bg">
+		<div class="animation-wrapper">
+			<div class="particle particle-1"></div>
+			<div class="particle particle-2"></div>
+			<div class="particle particle-3"></div>
+			<div class="particle particle-4"></div>
+		</div>
+	</div>
+
+	<footer>
+		<div class="block">
+			<!-- <a href="" class="footer-logo">
+				<br>Интересное о космос</a>
+			-->
+			<ul class="m3nu">
+				<li class=" active">
+					<a href="index.html">Главная</a>
+				</li>
+				<li class="">
+					<a href="#about">Созвездие</a>
+				</li>
+				<li class="">
+					<a href="pac.html">Солнечная система</a>
+				</li>
+				<li class="">
+					<a href="#contact">Звезды</a>
+				</li>
+				<li class="">
+					<a href="#contact">Планеты</a>
+				</li>
+				<li class="">
+					<a href="#contact">Карликовые планеты</a>
+				</li>
+				<li class="">
+					<a href="#contact">Спутники</a>
+				</li>
+			</ul>
+			<p class="copyright-text"><a href="mailto:nikolainedelko777@mail.com">Cosmo&copy;gmail.com </a>
+				| Все интересное о космосе</p>
+		</div>
+	</footer>
+
+
+
+
+	<script src="/js/particles/particles.js"></script>
+	<script src="/js/particles/app.js"></script>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script src="js/scroll.js"></script>
+
+
+</body>
+
+</html>

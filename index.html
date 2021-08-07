@@ -1,0 +1,70 @@
+<!-- Сообщаем браузеру как стоит обрабатывать эту страницу -->
+<!DOCTYPE html>
+<!-- Оболочка документа, указываем язык содержимого -->
+<html lang="ru">
+<!-- Заголовок страницы, контейнер для других важных данных (не отображается) -->
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="apple-touch-icon" href="/img/apple-touch-icon.png" sizes="180x180">
+	<link rel="shortcut icon" href="img/favicon-32x32.ico" sizes="32x32" type="image/x-icon">
+	<link rel="shortcut icon" href="img/favicon-16x16.ico" sizes="16x16" type="image/x-icon">
+	<!-- Заголовок страницы в браузере -->
+	<title>| Факты, информация и изображения о Солнечной системе | Cosmo.space</title>
+	<!-- Подключаем CSS -->
+	<link rel="stylesheet" href="css/info.css" />
+	<link rel="stylesheet" href="css/space.css">
+	<link rel="stylesheet" href="css/css.css">
+	<!-- Кодировка страницы -->
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+</head>
+<!-- Отображаемое тело страницы -->
+
+<body>
+	<div class="page-bg">
+		<div id="particles-js"></div>
+	</div>
+	<div class="contn">
+		<div class="content-top">
+			<div class="content-top__category"> <span id="typed"></span></div>
+			<div class="content-bottom-info">
+				<button class="button"><a href="pac.html">Начать путь</a></button>
+			</div>
+		</div>
+	</div>
+
+
+
+	<!--курсор-->
+	<div id="circles">
+		<div id="circle1"></div>
+	</div>
+
+	<!-- scripts -->
+	<script src="js/cursor.js" defer></script>
+	<script src="/js/particles/particles.js" defer></script>
+	<script src="/js/particles/app.js" defer></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11" ></script>
+	<script>
+		var typed = new Typed('#typed', {
+			/** 
+				* @property { array } strings строки для ввода 
+				* @property { string } stringsElement ID элемента, содержащего дочерние строки 
+			*/
+			onComplete: (self) => { },
+			strings: [
+				'',
+				'^100\n',
+				'🌌 Интересное о космосе 🪐 ^1200\n',
+				'',
+				'🌌 Interesting about space 🪐^1200\n',
+			],
+			backSpeed: 60,// скорость удаления текста
+			typeSpeed: 80, // скорость набора
+			cursorChar: '※',/* ▐ ǂ  _ | ┆ ※  × */  //показ курсора
+			loop: true, // повтор (true или false)
+		});
+	</script>
+
+</body>
+</html>

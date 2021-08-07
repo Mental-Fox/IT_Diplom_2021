@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="apple-touch-icon" href="/img/apple-touch-icon.png" sizes="180x180">
+	<link rel="shortcut icon" href="img/favicon-32x32.ico" sizes="32x32" type="image/x-icon">
+	<link rel="shortcut icon" href="img/favicon-16x16.ico" sizes="16x16" type="image/x-icon">
+
+	<link rel="stylesheet" href="css/space.css">
+	<link rel="stylesheet" href="css/css.css">
+
+	<script src="js/three.js"></script>
+	<!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r83/three.js">	</script>
+-->
+	<script src="js/planets/mars.js"></script>
+	<title>♅ | Уран: все о тайнах «зеленой» планеты | ♅</title>
+</head>
+
+
+<body>
+
+	<div class="page-bg">
+		<div id="particles-js"></div>
+	</div>
+	<div id="page-wrap">
+
+		<div class="top-menu">
+			<ul class="blok-menu">
+				<nav>
+					<ul class="main">
+						<li><a href="index.html">Главная</a></li>
+						<li><a href="pac.html">Солнечная система</a></li>
+						<li>
+							<a href="#">Звезды</a>
+							<ul>
+								<li><a href="sun.html">Солнце <img src="img/icon/sun.png" width="60" height="60" alt=""> </a>
+								</li>
+								<li><a href="">Полярная<img src="img/icon/polrnaji.png" width="60" height="60" alt="">
+									</a></li>
+								<li><a href=""></a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="planets.html">Планеты</a>
+							<ul>
+								<li> <a href="mercur.html"> Меркурий <img src="img/icon/mercur.png" alt="" width="60"
+											height="60"></a></li>
+								<li><a href="venera.html">Венера
+										<img src="img/icon/venus.png" alt="" width="60" height="60"></a></li>
+								<li><a href="earth.html">Земля<img src="img/icon/earth.png" alt="" width="60" height="60"></a>
+								</li>
+								<li><a href="mars.html">Марс<img src="img/icon/mars.png" alt="" width="60" height="60"></a></li>
+								<li><a href="jupiter.html">Юпитер<img src="img/icon/jupiter.png" alt="" width="60"
+											height="60"></a></li>
+								<li><a href="saturn.html">Сатурн<img src="img/icon/saturn.png" alt="" width="60"
+											height="60"></a></li>
+								<li><a href="uran.html">Уран<img src="img/icon/uran.png" alt="" width="60" height="60"></a></li>
+								<li><a href="neptune.html">Нептун<img src="img/icon/neptun.png" alt="" width="60"
+											height="60"></a></li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="#">Карликовые планеты</a>
+							<ul>
+								<li><a href="#">Плутон <img src="img/icon/pluton.png" width="60" height="60" alt=""> </a></li>
+								<li><a href="#">Церера <img src="img/icon/ceres.png" width="60" height="60" alt=""> </a></li>
+								<li><a href="#">Хаумеф <img src="img/icon/haumef.png" width="60" height="60" alt=""> </a></li>
+								<li><a href="#">Макемаке <img src="img/icon/makemake.png" width="60" height="60" alt=""> </a>
+								</li>
+								<li><a href="#">Эрида(Эрис) <img src="img/icon/eris.png" width="60" height="60" alt=""> </a>
+								</li>
+							</ul>
+						</li>
+
+						<li><a href="#">Спутники</a></li>
+						<li><a href="#">Разное</a></li>
+
+						<li>
+							<div class="box">
+								<div class="container-1">
+									<input type="search" id="search" placeholder="Поиск..." />
+								</div>
+							</div>
+						</li>
+					</ul>
+				</nav>
+			</ul>
+		</div>
+
+
+		<div class="ytWidget">
+			<div id="ytWidget"> </div>
+			<script
+				src="https://translate.yandex.net/website-widget/v1/widget.js?widgetId=ytWidget&pageLang=ru&widgetTheme=light&autoMode=false"
+				type="text/javascript"></script>
+		</div>
+
+		<!--<audio id=audio src="audio/space.mid" hidden loop="-1" autoplay></audio>-->
+		<div class="logo">
+
+			<canvas id="myCanvas"></canvas>
+			<script src="js/three.js"></script>
+			<script src="js/OrbitControls.js"></script>
+			<script src="js/planets/uran.js"></script>
+			<!-- ------------------------------------------------ -->
+			<div class="anim-show">
+				<div class="block-har">
+					<h4>УРАН - седьмая планета от Солнца</h4>
+					<hr>
+					<span id="typed"></span>
+					<ul class="har" id="typed-strings">
+						<li>Диаметр: 51118км <br>
+							Температура поверхности: средняя -210 °С <br>
+							Растояние от Солнца: 2,8 млрд. км<br>
+							Спутники: Титания, Оберон, Пак - всего 27
+						</li>
+					</ul>
+					<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+					<script>
+						var typed = new Typed('#typed', {
+							stringsElement: '#typed-strings',
+							typeSpeed: 80,
+						});
+					</script>
+				</div>
+							<!-- ------------------------------------------------ -->
+				<div class="block-qart">
+					<a href="https://emphasized-rain-sunscreen.glitch.me/terra.html"><button class="modelbutt3d">посмотреть 3d рельеф </button></a>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+
+
+
+	<div class="content" onFocus="audio.play()">
+		<a href="#" class="scrollup">Наверх</a>
+		<div class="meny">
+			<a href="#fakt">1. Факты о Урана</a>
+			<a href="#massa">2. Cocтaв и пoвepxнocть плaнeты Урана</a>
+			<a href="#sostav">3. Cпутники Урана</a>
+			<a href="#history">4. Строение Урана</a>
+			<a href="#ideal">4. Вращение Урана</a>
+			<a href="#isled">4. Магнитное поле Урана</a>
+
+		</div>
+
+		<div id="vv">
+			<div class="item1">Уран — первая открытая учеными планета</div>
+			<p class="text">
+				Уран — первая планета, о которой узнали астрономы. Долгое время ученые следили за ней, ошибочно принимая за
+				звезду или комету. Уильям Гершель наблюдал за небесным телом в течение года и в 1781 году установил, что оно
+				находится на планетарной орбите Солнца.
+			</p>
+			<p class="text">
+				Уран единственный получил свое название из греческой, а не римской мифологии. Планету нарекли в честь
+				одноименного бога неба.
+			</p>
+		</div>
+
+		<div id="fakt">
+			<div class="item1">12 познавательных фактов о Уране</div>
+
+			<div class="image">
+				<figure>
+					<div class="ims">
+						<img src="img/uran/nicolas-lanthemann-test-9.jpg" alt="">
+						<figcaption>
+							<h6>Интepecные фaкты o плaнeтe Уране</h6>
+						</figcaption>
+					</div>
+				</figure>
+			</div>
+		</div>
+
+		<div class="cards-list">
+			<div class="card 1">
+				<div class="card_title title-white">
+					<p>
+						<br>
+
+						Ось наклонена почти под 100-градусным углом (планета «лежит на боку»).
+					</p>
+				</div>
+			</div>
+
+			<div class="card 1">
+				<div class="card_title title-white">
+					<p>
+						<br>
+						<br>
+						Сутки длятся около 17 земных часов, год — почти 85 земных лет.
+					</p>
+				</div>
+			</div>
+
+			<div class="card 1">
+				<div class="card_title title-white">
+					<p>
+						<br>
+						Облака содержат много метана, который придает планете красивый сине-зеленый оттенок.
+					</p>
+				</div>
+			</div>
+
+			<div class="card 1">
+				<div class="card_title title-white">
+					<p>
+						<br>
+						<br>
+						Температура ледяного ядра достигает 7000 градусов.
+					</p>
+				</div>
+			</div>
+
+			<div class="card 1">
+				<div class="card_title title-white">
+					<p>
+						<br>
+
+						Магнитное поле схоже с земным (есть вероятность полярных сияний).
+					</p>
+				</div>
+			</div>
+
+			<div class="card 1">
+				<div class="card_title title-white">
+					<p>
+						<br>
+						<br>
+						Смены погодных условий нет.
+					</p>
+				</div>
+			</div>
+
+			<div class="card 1">
+				<div class="card_title title-white">
+					<p>
+						<br>
+						Отсутствует твёрдая поверхность, оболочка — газообразная, с примесью метана, аммиака и льда.
+					</p>
+				</div>
+			</div>
+
+			<div class="card 1">
+				<div class="card_title title-white">
+					<p>
+						<br>
+						<br>
+						Движется по орбите против часовой стрелки.
+					</p>
+				</div>
+			</div>
+
+			<div class="card 1">
+				<div class="card_title title-white">
+					<p>
+						<br>
+						<br>
+						По величине уступает только Юпитеру и Сатурну.
+					</p>
+				</div>
+			</div>
+
+			<div class="card 1">
+				<div class="card_title title-white">
+					<p>
+						<br>
+						<br>
+						Самая холодная планета Солнечной системы.
+					</p>
+				</div>
+			</div>
+
+			<div class="card 1">
+				<div class="card_title title-white">
+					<p>
+						<br>
+						<br>
+						Расположен на седьмой орбите.
+					</p>
+				</div>
+			</div>
+
+			<div class="card 1">
+				<div class="card_title title-white">
+					<p>
+						<br>
+						<br>
+						Имеет 27 естественных спутников.
+					</p>
+				</div>
+			</div>
+		</div>
+
+
+
+		<br>
+		<div id="massa">
+			<div class="item1">Cocтaв и пoвepxнocть плaнeты Caтуpн</div>
+		</div>
+		<p class="text">
+			Являясь седьмой планетой по удаленности от Солнца, Уран третий по величине в нашей Солнечной системе, а по
+			своей массе — четвертый.
+		</p>
+		<p class="text">
+			Планета Уран относится к классу газовых гигантов. Экваториальный радиус примерно составляет 25 560 км, полярный
+			радиус 24973. Планета имеет шарообразную форму, на полюсах сплюснутую.
+		</p>
+		<p class="text">
+			В чем состоит уникальность Урана, так это в оси вращения, наклон которой составляет практически 98 градусов к
+			орбитальной плоскости и в движении вокруг своей оси, подобно Венере, он двигается по часовой стрелке. К
+			примеру, земная ось имеет наклон 66 градусов к плоскости орбиты и вращается с запада на восток, против часовой
+			стрелки. Получается, что по орбите Уран движется на боку, катясь как шарик, и вращается с востока на запад.
+			Оборот вокруг собственной оси Уран совершает за 17 часов 14 минут.
+			По орбите вокруг Солнца пролетает за 84 года.
+			Расстояние от Урана до Солнца 1871,2 млн км.
+		</p>
+
+		<div class="image">
+			<figure>
+				<div class="ims">
+					<img src="img/uran/sravnenie.png" alt="">
+					<figcaption>
+						<h6>
+							Сравнительные размеры Урана и Земли
+						</h6>
+					</figcaption>
+				</div>
+			</figure>
+		</div>
+
+		<div id="sostav">
+			<div class="item1">Спутники и кольца </div>
+			<p class="text">
+				Все спутники Урана названы в честь персонажей книг Поупа и Шекспира. Особенно выделяются два гиганта —
+				Оберон и Титания.
+			<p class="text"> Диаметр первого — 1,5 тысячи километров. Его расстояние от Урана чуть больше 550 тыс. км.
+				Всегда повернут к
+				планете одним боком и один виток вокруг нее проходит за 13 дней. Температура ледяного гиганта — не выше
+				минус 200 градусов.</p>
+			<p class="text">Титания аналогична Оберону по диаметру (1,5 тыс. км) и по удаленности от Урана (около 440 тыс.
+				км). Проходит
+				оборот вокруг планеты за 9 дней.</p>
+			<p class="text">Самое невероятный спутник на орбите зеленой планеты — Миранда. Ее диаметр — 400 км, при этом на
+				поверхности есть горы до 5 км высотой и аналогичной глубины ущелья.</p>
+			<p class="text">
+				Кольцевая система планеты — 13 неярких ободков. Есть предположение, что это — остатки бывшего спутника,
+				которые приняли вид окружностей после разрушения в результате катастрофы.</p>
+			</p>
+			<div class="image">
+				<figure>
+					<div class="ims">
+						<img width="150" height="150" src="img/uran/sputnik.jpg" alt="">
+						<figcaption>
+							<h6>
+								Спутники и кольца
+							</h6>
+						</figcaption>
+					</div>
+				</figure>
+			</div>
+		</div>
+
+		<div id="history">
+			<div class="item1">Строение Урана</div>
+
+			<p class="text">
+				Ученые выдвигают несколько версий внутреннего строения планеты от двухярусной модели до классической
+				трехярусной. За основу большинство принимают стандартную модель.
+			</p>
+
+			<div class="image">
+				<figure>
+					<div class="ims">
+						<img src="img/uran/UranSostav-e1569850746607.jpg" alt="">
+						<figcaption>
+							<h6>
+								Строение Урана
+							</h6>
+						</figcaption>
+					</div>
+				</figure>
+			</div>
+		</div>
+
+		<div id="ideal">
+			<div class="item1">Вращение Урана</div>
+			<p class="text">
+				Вращение Урана вокруг Солнца, пожалуй, является самой интересной особенностью этой планеты. Так как мы
+				писали выше, Уран вращается иначе, чем все другие планеты, а именно «ретроградно», подобно тому, как катится
+				по земле шар. В результате этого смена дня и ночи (в нашем привычном понимании) на Уране происходит только
+				вблизи экватора планеты, притом, что Солнце там расположено очень низко над горизонтом, примерно как в
+				полярных широтах на Земле. Что же касается полюсов планеты, то там «полярный день» и «полярная ночь» сменяют
+				друг друга раз в 42 земных года.
+
+			<p class="text">
+				Что же касается года на Уране, то один тамошний год равен нашим 84 земным годам, именно за такое время
+				планета делает круг по своей орбите вокруг Солнца.
+			</p>
+			</p>
+
+			<div class="image">
+				<figure>
+					<div class="ims">
+						<img width="150" height="150" src="img/uran/povorot.png" alt="">
+						<figcaption>
+							<h6>
+								Наклон планеты 98°
+							</h6>
+						</figcaption>
+					</div>
+				</figure>
+			</div>
+		</div>
+
+
+		<div id="isled">
+			<div class="item1">Магнитное поле Урана</div>
+			<p class="text">
+				Магнитное поле нашего Урана имеет ряд своих характерных особенностей по сравнению с остальными планетами и
+				по всей вероятности связано с его особенностями вращения и отсутствию внутреннего источника собственной
+				энергии.</p>
+			<p class="text">
+			<ul class="lishka">
+				<li style="list-style: circle inside">Первая особенность – магнитная ось планеты сдвинута с центра оси
+					планеты на треть его радиуса и при этом образуется угол в 60 градусов.</li>
+				<li style="list-style: circle inside">Вторая особенность это непостоянство напряженности магнитных полей.
+				</li>
+				<li style="list-style: circle inside">Третье – имеется несколько разных пар магнитных полюсов, кроме
+					основных двух еще 2 других более слабых.
+				</li>
+			</ul>
+			</p>
+
+			<div class="image">
+				<figure>
+					<div class="ims">
+						<img width="150" height="150" src="img/uran/32836.jpg" alt="">
+						<figcaption>
+							<h6>
+								Магнитное поле Урана
+							</h6>
+						</figcaption>
+					</div>
+				</figure>
+			</div>
+
+			<p class="text">
+				Появление телескопов стало расцветом в изучении Марса. Слайфер, Барнард, Вокулёр и многие другие
+				астрономы стали величайшими исследователями Марса до выхода человека в космос.
+			</p>
+			<p class="text">
+				Выход человека в космос позволил изучать Красную планету более точно и подробно. В середине 20 века с
+				помощью межпланетных станций были сделаны точные снимки поверхности, а сверхмощные инфракрасные и
+				ультрафиолетовые телескопы позволили измерить состав атмосферы планеты и скорость ветров на ней.
+			</p>
+			<p class="text">
+				В дальнейшем последовали всё более точные исследования Марса со стороны СССР, США, а затем и других
+				государств.
+			</p>
+			<p class="text">
+				Изучение Марса продолжается и по сей день, а полученные данные только подогревают интерес к его изучению.
+			</p>
+		</div>
+
+
+
+
+
+		<div class="video">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/h-F36sUDoWM" frameborder="0"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+				allowfullscreen></iframe>
+		</div>
+	</div>
+
+
+	<div class="page-bg">
+		<div class="animation-wrapper">
+			<div class="particle particle-1"></div>
+			<div class="particle particle-2"></div>
+			<div class="particle particle-3"></div>
+			<div class="particle particle-4"></div>
+		</div>
+	</div>
+
+	<footer>
+		<div class="block">
+			<!-- <a href="" class="footer-logo">
+				<br>Интересное о космос</a>
+			-->
+			<ul class="m3nu">
+				<li class=" active">
+					<a href="index.html">Главная</a>
+				</li>
+				<li class="">
+					<a href="#about">Созвездие</a>
+				</li>
+				<li class="">
+					<a href="pac.html">Солнечная система</a>
+				</li>
+				<li class="">
+					<a href="#contact">Звезды</a>
+				</li>
+				<li class="">
+					<a href="#contact">Планеты</a>
+				</li>
+				<li class="">
+					<a href="#contact">Карликовые планеты</a>
+				</li>
+				<li class="">
+					<a href="#contact">Спутники</a>
+				</li>
+			</ul>
+			<p class="copyright-text"><a href="mailto:nikolainedelko777@mail.com">Cosmo&copy;gmail.com </a>
+				| Все интересное о космосе</p>
+		</div>
+	</footer>
+
+
+
+
+
+	<script src="/js/particles/particles.js"></script>
+	<script src="/js/particles/app.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script src="js/scroll.js"></script>
+
+
+</body>
+
+</html>
