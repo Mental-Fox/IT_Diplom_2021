@@ -9,6 +9,7 @@ Made the planets even found to rotate everything smoothly
 But something was still missing. 
 
 I ended up forgetting this project for 1 month to reboot my brain.  Later it came to me to add starry sky and satellites and a description 
+
 ---
 ### Дипломный проект 2021 - вложил душу в этот проект. Мне сильно нравилась 3д графика и космос я решил сделать сначала просто сайт о планетах - но в нем чего-то не хватало.
 
