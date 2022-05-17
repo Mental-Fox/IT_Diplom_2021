@@ -1,6 +1,6 @@
-# Graduation project 2021
+### Graduation project 2021
 
-You can also view this project: [https://in-space.netlify.app/]
+#### You can also view this project: https://in-space.netlify.app/
 
 ### Graduation project 2021 - put my heart and soul into this project. I liked 3D graphics and space a lot and decided to make a simple website about planets at first - but it lacked something.
 
