@@ -1,5 +1,7 @@
 # Graduation project 2021
 
+You can also view this project: [https://in-space.netlify.app/]
+
 ### Graduation project 2021 - put my heart and soul into this project. I liked 3D graphics and space a lot and decided to make a simple website about planets at first - but it lacked something.
 
 Faced with the three.js library at first I did not understand how it works - but after a few weeks and torture to make 1 planet I understood how to do it 
@@ -25,5 +27,4 @@ I ended up forgetting this project for 1 month to reboot my brain.  Later it cam
 ![example](https://github.com/Mental-Fox/graduation_project_2021/blob/master/img/earth.png)
 
 ---
-You can also view this project:
-https://in-space.netlify.app/
+
